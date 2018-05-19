@@ -689,24 +689,12 @@ a {
   .button a {
     color: white; }
 
-/*to display page*/
-.site-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1120px; }
-
-/*main wide area for pages displaying sidebar*/
-.content-area {
-  border-right: 1px solid #e1e1e1;
-  padding-right: 5%; }
-
-/*sidebar aka widgetized area*/
-.widget-area {
-  padding-left: 5%;
-  width: 30%; }
+.reversed-button {
+  background-color: #248A83;
+  border: 1px solid #248A83;
+  color: white; }
+  .reversed-button a {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Media
@@ -771,40 +759,92 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-archive):not(.tax-product-type):not(.post-type-archive-adventure):not(.single-adventure) .site-content {
+  width: 1120px;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-archive):not(.tax-product-type):not(.post-type-archive-adventure):not(.single-adventure) .site-content .content-area {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding: 60px 50px 60px 0; }
+  body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-archive):not(.tax-product-type):not(.post-type-archive-adventure):not(.single-adventure) .site-content .widget-area {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    padding-top: 20px;
+    padding-left: 60px;
+    border-left: black; }
+
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 1120px; }
 
 /* Front page front-page.php */
-h2 {
+.home .front {
+  margin-bottom: 5rem;
+  width: 1120px; }
+
+.home h2 {
   font-size: 2.4rem;
   font-weight: 400;
   margin-bottom: 3.75rem;
   text-align: center; }
 
-.front {
-  margin-bottom: 5rem; }
+.home .site-content {
+  width: 100%;
+  margin: 0 auto; }
 
 /*Front page -> Banner*/
 .front-page-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), #969696 url("../../img/home-hero.jpg") no-repeat top;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), #969696 url("../../img/home-hero.jpg") no-repeat top;
   background-size: cover,cover;
-  height: 100vh;
+  height: 100vh; }
+
+/*Front page -> Shop products*/
+.product-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  text-align: center; }
+  .product-container .single-product {
+    border: 1px solid #e1e1e1;
+    border-top-width: 5px;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    max-width: 23.5%;
+    padding: .75rem; }
+    .product-container .single-product:hover {
+      border: 1px solid #d99054; }
+    .product-container .single-product img {
+      height: 70px;
+      width: 70px; }
+    .product-container .single-product p {
+      margin-bottom: 1.5rem; }
+    .product-container .single-product .reversed-button {
+      width: 60%;
+      margin: 0 auto; }
+      .product-container .single-product .reversed-button a {
+        color: white;
+        font-family: "Novecentos", sans-serif;
+        padding: 5px;
+        text-align: center;
+        text-transform: uppercase; }
 
 /*Front page -> Journal section*/
 .blog-posts-container {

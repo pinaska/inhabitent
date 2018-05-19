@@ -33,6 +33,38 @@ get_header(); ?>
 
 			<section class="front shop container">
 				<h2>SHOP STUFF</h2>	
+				<div class="product-container">
+					<article class="single-product">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/do.svg" alt="orange-paper-map"/>
+						<p>Get back to nature with all the tools and toys you need to enjoy the great outdoors.</p>
+						<div class="reversed-button">
+							<a href="http://">do stuff</a>
+						</div>
+					</article>
+					<article class="single-product">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/eat.svg" alt="orange-mug"/>
+						<p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
+						<div class="reversed-button">
+							<a href="http://">eat stuff</a>
+						</div>
+					</article>
+					<article class="single-product">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sleep.svg" alt="orange-sleeping-bag"/>
+						<p>Get a good night's rest in the wild in a home away from home that travels well.</p>
+						<div class="reversed-button">
+							<a href="http://">sleep stuff</a>
+						</div>
+					</article>
+					<article class="single-product">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/wear.svg" alt="orange-tuk"/>
+						<p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
+						<div class="reversed-button">
+							<a href="http://">wear stuff</a>
+						</div>
+						</article>
+					</div>
+
+
 			</section><!--shop-->
 
 			<section class="front blog container">
@@ -88,6 +120,7 @@ get_header(); ?>
 					<article class="adventures-posts-single d">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/night-sky.jpg" alt="sky-and-stars-at-night"/>
 					</article>
+
 				</div><!--adventures-posts-container-->	
 
 

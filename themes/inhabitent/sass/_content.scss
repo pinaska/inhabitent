@@ -64,25 +64,15 @@
 		color: white;
 	   }
   }
-/*to display page*/
-.site-content{
-	display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1120px;
+  .reversed-button{
+	background-color:$color_green;
+	border: 1px solid $color_green;
+	color: white;
+	a{
+		color: white;
+	}
 }
 
-/*main wide area for pages displaying sidebar*/
-.content-area{
-border-right: 1px solid #e1e1e1;
-padding-right: 5%;
-}
-/*sidebar aka widgetized area*/
-.widget-area{
-	padding-left: 5%;
-	width: 30%;
-
-}
 
 
 
