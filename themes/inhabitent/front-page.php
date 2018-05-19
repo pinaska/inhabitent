@@ -27,7 +27,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 			<?php the_posts_navigation(); ?>
 
-			<section class="front front-page-banner">
+			<section class=" front-page-banner">
 			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inhabitent-logo-full.svg" alt="Inhabitent logo"/></a>
 			</section><!--banner-->
 
