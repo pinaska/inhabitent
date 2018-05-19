@@ -12,7 +12,8 @@ body{
       display: flex;
 
       .content-area{
-        flex-basis: 70%;
+				flex-basis: 70%;
+				border-right: 1px solid #e1e1e1;
         padding: 60px 50px 60px 0;
       }
       .widget-area{ // sidebar
@@ -24,7 +25,6 @@ body{
     } // end of .site-content 
   }   
 } // end of body
-
 
 .container {
 	margin: 0 auto;	
