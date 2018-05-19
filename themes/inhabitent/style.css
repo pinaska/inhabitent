@@ -708,43 +708,6 @@ a {
   padding-left: 5%;
   width: 30%; }
 
-/* FOOTER*/
-.footer-widget {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.footer-widget-item {
-  margin: 3rem 0;
-  padding-right: 1.5rem;
-  width: 25%; }
-
-.footer-widget-item:last-child {
-  width: 50%;
-  padding: 25px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
-
-.footer-copyright {
-  text-align: center;
-  font-family: Novecento Sans Web,sans-serif;
-  padding: 1.5rem 0;
-  text-align: center;
-  text-transform: uppercase; }
-
-.site-footer {
-  background: url(../../img/dark-wood@2x.png);
-  background-size: 512px 512px;
-  color: white; }
-  .site-footer a {
-    color: #fff;
-    text-decoration: none;
-    width: 280px; }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1034,3 +997,39 @@ h2 {
     margin-right: 10px; }
     .social-buttons .button:hover {
       border: 1px solid #248A83; }
+
+/*Footer*/
+/* FOOTER*/
+.footer-widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer-widget .footer-widget-item {
+    margin: 3rem 0;
+    padding-right: 1.5rem;
+    width: 25%; }
+    .footer-widget .footer-widget-item:last-child {
+      width: 50%;
+      padding: 25px 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+
+.footer-copyright {
+  text-align: center;
+  font-family: Novecento Sans Web,sans-serif;
+  padding: 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase; }
+
+.site-footer {
+  background: url(../../img/dark-wood@2x.png);
+  background-size: 512px 512px;
+  color: white; }
+  .site-footer a {
+    color: #fff;
+    text-decoration: none;
+    width: 280px; }
