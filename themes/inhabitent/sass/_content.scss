@@ -47,3 +47,74 @@
 .bypostauthor {
 	display: block;
 }
+
+.button{
+	padding: 10px;
+	// width: 40%;
+	text-align: center;
+	font-family: $font_second;
+	text-transform: uppercase;
+	border: 1px solid white;
+	&:hover{
+		background-color:$color_green;
+		border: 1px solid $color_green;
+		color: white;
+	}
+	   a{
+		color: white;
+	   }
+  }
+/*to display page*/
+.site-content{
+	display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1120px;
+}
+
+/*main wide area for pages displaying sidebar*/
+.content-area{
+border-right: 1px solid #e1e1e1;
+padding-right: 5%;
+}
+/*sidebar aka widgetized area*/
+.widget-area{
+	padding-left: 5%;
+	width: 30%;
+
+}
+/* FOOTER*/
+.footer-widget{
+	display:flex;
+}
+.footer-widget-item{
+	margin: 3rem 0;
+    padding-right: 1.5rem;
+	width: 25%;
+}
+.footer-widget-item:last-child{
+	width: 50%;
+	padding: 25px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+.footer-copyright{
+	text-align: center;
+	font-family: Novecento Sans Web,sans-serif;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.site-footer {
+    background: url(../../img/dark-wood@2x.png);
+	background-size: 512px 512px;
+	color:white;
+	 a{
+		color: #fff;
+		text-decoration: none;
+		width: 280px;
+		}
+}
+
+
+

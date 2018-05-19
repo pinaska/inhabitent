@@ -1,9 +1,9 @@
 /*!
-Theme Name: Inhabitent_Theme
+Theme Name: RED Starter Theme
 Theme URI: http://underscores.me/
-Author: Kate J | RED Academy Spring 2018
+Author: RED Academy
 Author URI: http://www.redacademy.com
-Description: A WordPress theme developed for Inhabitent store based on starter theme for RED Academy students.
+Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,11 +49,7 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1120px;
-  }
+  margin: 0; }
 
 article,
 aside,
@@ -229,6 +225,54 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+/*
+* Merriweather
+*/
+@font-face {
+  font-family: 'Merriweather';
+  src: url("Merriweather-BoldItalic.eot");
+  src: url("Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("Merriweather-BoldItalic.woff2") format("woff2"), url("Merriweather-BoldItalic.woff") format("woff"), url("Merriweather-BoldItalic.ttf") format("truetype"), url("Merriweather-BoldItalic.svg#Merriweather-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("Merriweather-LightItalic.eot");
+  src: url("Merriweather-LightItalic.eot?#iefix") format("embedded-opentype"), url("Merriweather-LightItalic.woff2") format("woff2"), url("Merriweather-LightItalic.woff") format("woff"), url("Merriweather-LightItalic.ttf") format("truetype"), url("Merriweather-LightItalic.svg#Merriweather-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("Merriweather-Light.eot");
+  src: url("Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("Merriweather-Light.woff2") format("woff2"), url("Merriweather-Light.woff") format("woff"), url("Merriweather-Light.ttf") format("truetype"), url("Merriweather-Light.svg#Merriweather-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("Merriweather-Bold.eot");
+  src: url("Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("Merriweather-Bold.woff2") format("woff2"), url("Merriweather-Bold.woff") format("woff"), url("Merriweather-Bold.ttf") format("truetype"), url("Merriweather-Bold.svg#Merriweather-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+/*
+* Novecentos
+*/
+@font-face {
+  font-family: 'Novecentos';
+  src: url("Novecentos-Normal.eot");
+  src: url("Novecentos-Normal.eot?#iefix") format("embedded-opentype"), url("Novecentos-Normal.woff2") format("woff2"), url("Novecentos-Normal.woff") format("woff"), url("Novecentos-Normal.ttf") format("truetype"), url("Novecentos-Normal.svg#.") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecentos';
+  src: url("Novecentos-DemiBold.eot");
+  src: url("Novecentos-DemiBold.eot?#iefix") format("embedded-opentype"), url("Novecentos-DemiBold.woff2") format("woff2"), url("Novecentos-DemiBold.woff") format("woff"), url("Novecentos-DemiBold.ttf") format("truetype"), url("Novecentos-DemiBold.svg#.") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -238,14 +282,25 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "Novecentos", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+h3 {
+  color: #248A83; }
+
+h4 {
+  color: #d99054;
+  font-size: 1.2rem;
+  margin-bottom: .75rem; }
 
 /* Copy */
 p {
@@ -305,12 +360,24 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh; }
 
 blockquote, q {
   quotes: "" ""; }
   blockquote:before, blockquote:after, q:before, q:after {
     content: ""; }
+
+button, button:hover, button:active, button:focus, button:visited {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 hr {
   background-color: #ccc;
@@ -347,6 +414,9 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+a {
+  text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -606,6 +676,75 @@ a {
 .bypostauthor {
   display: block; }
 
+.button {
+  padding: 10px;
+  text-align: center;
+  font-family: "Novecentos", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid white; }
+  .button:hover {
+    background-color: #248A83;
+    border: 1px solid #248A83;
+    color: white; }
+  .button a {
+    color: white; }
+
+/*to display page*/
+.site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+
+/*main wide area for pages displaying sidebar*/
+.content-area {
+  border-right: 1px solid #e1e1e1;
+  padding-right: 5%; }
+
+/*sidebar aka widgetized area*/
+.widget-area {
+  padding-left: 5%;
+  width: 30%; }
+
+/* FOOTER*/
+.footer-widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.footer-widget-item {
+  margin: 3rem 0;
+  padding-right: 1.5rem;
+  width: 25%; }
+
+.footer-widget-item:last-child {
+  width: 50%;
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.footer-copyright {
+  text-align: center;
+  font-family: Novecento Sans Web,sans-serif;
+  padding: 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase; }
+
+.site-footer {
+  background: url(../../img/dark-wood@2x.png);
+  background-size: 512px 512px;
+  color: white; }
+  .site-footer a {
+    color: #fff;
+    text-decoration: none;
+    width: 280px; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -669,4 +808,229 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+
+/* Front page front-page.php */
+h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 3.75rem;
+  text-align: center; }
+
+.front {
+  margin-bottom: 5rem; }
+
+/*Front page -> Banner*/
+.front-page-banner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), #969696 url("../../img/home-hero.jpg") no-repeat top;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), #969696 url("../../img/home-hero.jpg") no-repeat top;
+  background-size: cover,cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+/*Front page -> Journal section*/
+.blog-posts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .blog-posts-container .blog-posts-single {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    border: 1px solid #e1e1e1;
+    position: relative; }
+    .blog-posts-container .blog-posts-single h3 {
+      font-size: 1.3rem; }
+      .blog-posts-container .blog-posts-single h3 a {
+        color: #248A83; }
+        .blog-posts-container .blog-posts-single h3 a:hover {
+          color: black; }
+    .blog-posts-container .blog-posts-single img {
+      height: 250px; }
+  .blog-posts-container .blog-posts-single-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: .75rem; }
+  .blog-posts-container .blog-post-button {
+    bottom: .75rem;
+    left: .75rem;
+    width: 40%;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center; }
+    .blog-posts-container .blog-post-button:hover {
+      background-color: #248A83;
+      border: 1px solid #248A83;
+      color: #fff; }
+    .blog-posts-container .blog-post-button a {
+      text-transform: uppercase;
+      font-family: "Novecentos", sans-serif;
+      color: black; }
+      .blog-posts-container .blog-post-button a:hover {
+        color: white; }
+
+/*Front page -> Adventures section*/
+.adventures-posts-container {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .adventures-posts-container .adventures-posts-single {
+    position: relative; }
+    .adventures-posts-container .adventures-posts-single img {
+      display: inline-block;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%;
+      -webkit-filter: contrast(80%) brightness(70%);
+              filter: contrast(80%) brightness(70%); }
+  .adventures-posts-container .adventures-posts-single-text {
+    position: absolute;
+    top: 0;
+    margin: 25px; }
+    .adventures-posts-container .adventures-posts-single-text h3 {
+      font-size: 3rem;
+      line-height: 1.25rem;
+      margin: 20px 0;
+      line-height: 1; }
+    .adventures-posts-container .adventures-posts-single-text .entry-title a {
+      font-family: "Merriweather", serif;
+      font-weight: 400;
+      text-transform: none;
+      color: white; }
+      .adventures-posts-container .adventures-posts-single-text .entry-title a:hover {
+        color: #d99054;
+        opacity: 50%; }
+    .adventures-posts-container .adventures-posts-single-text .adventures-post-button {
+      padding: 5px;
+      text-align: center;
+      font-family: "Novecentos", sans-serif;
+      text-transform: uppercase;
+      border: 1px solid white; }
+      .adventures-posts-container .adventures-posts-single-text .adventures-post-button:hover {
+        background-color: #248A83;
+        border: 1px solid #248A83; }
+      .adventures-posts-container .adventures-posts-single-text .adventures-post-button a {
+        color: white; }
+  .adventures-posts-container .adventures-posts-single:nth-child(1) {
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+    height: 552.5px; }
+    .adventures-posts-container .adventures-posts-single:nth-child(1) img {
+      height: 552.5px; }
+  .adventures-posts-container .adventures-posts-single:nth-child(2) {
+    grid-column-start: span 2;
+    height: 268.75px; }
+    .adventures-posts-container .adventures-posts-single:nth-child(2) img {
+      height: 268.75px; }
+  .adventures-posts-container .adventures-posts-single:nth-child(3) {
+    height: 268.75px; }
+    .adventures-posts-container .adventures-posts-single:nth-child(3) img {
+      height: 268.75px; }
+    .adventures-posts-container .adventures-posts-single:nth-child(3) .adventures-posts-single-text h3 {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      margin: 20px 0; }
+  .adventures-posts-container .adventures-posts-single:nth-child(4) {
+    height: 268.75px; }
+    .adventures-posts-container .adventures-posts-single:nth-child(4) img {
+      height: 268.75px; }
+    .adventures-posts-container .adventures-posts-single:nth-child(4) .adventures-posts-single-text h3 {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      margin: 20px 0; }
+
+.adventures-button {
+  background: #248a83;
+  color: #fff;
+  font-family: "Novecentos", sans-serif;
+  font-size: 1.2rem;
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 20%;
+  margin-top: 1.2rem; }
+  .adventures-button a {
+    color: white; }
+
+/*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
+.blog .post, .single-post .post, .archive .post {
+  margin-bottom: 80px; }
+  .blog .post .entry-header, .single-post .post .entry-header, .archive .post .entry-header {
+    position: relative; }
+    .blog .post .entry-header img, .single-post .post .entry-header img, .archive .post .entry-header img {
+      width: 100%;
+      display: block; }
+    .blog .post .entry-header .entry-title, .single-post .post .entry-header .entry-title, .archive .post .entry-header .entry-title {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      background-color: #248A83;
+      width: 570px;
+      padding: 15px 25px;
+      line-height: 40px; }
+      .blog .post .entry-header .entry-title a, .single-post .post .entry-header .entry-title a, .archive .post .entry-header .entry-title a {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700; }
+        .blog .post .entry-header .entry-title a:hover, .single-post .post .entry-header .entry-title a:hover, .archive .post .entry-header .entry-title a:hover {
+          color: #d99054; }
+      .blog .post .entry-header .entry-title:not(.blog), .single-post .post .entry-header .entry-title:not(.blog), .archive .post .entry-header .entry-title:not(.blog) {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700; }
+    .blog .post .entry-header .entry-meta, .single-post .post .entry-header .entry-meta, .archive .post .entry-header .entry-meta {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: #248A83;
+      padding: 5px 15px;
+      color: white;
+      font-family: "Novecentos", sans-serif;
+      text-transform: uppercase; }
+      .blog .post .entry-header .entry-meta span, .single-post .post .entry-header .entry-meta span, .archive .post .entry-header .entry-meta span {
+        color: white;
+        font-family: "Novecentos", sans-serif;
+        text-transform: uppercase; }
+        .blog .post .entry-header .entry-meta span:not(.blog) a, .single-post .post .entry-header .entry-meta span:not(.blog) a, .archive .post .entry-header .entry-meta span:not(.blog) a {
+          color: white;
+          font-family: "Novecentos", sans-serif;
+          text-transform: uppercase; }
+          .blog .post .entry-header .entry-meta span:not(.blog) a:hover, .single-post .post .entry-header .entry-meta span:not(.blog) a:hover, .archive .post .entry-header .entry-meta span:not(.blog) a:hover {
+            color: #d99054; }
+
+.social-buttons {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .social-buttons .button {
+    border: 1px solid black;
+    margin-right: 10px; }
+    .social-buttons .button:hover {
+      border: 1px solid #248A83; }

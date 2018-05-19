@@ -61,8 +61,8 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: 'localhost[:port-here]/[your-dir-name-here]'
-  });
+    proxy: 'localhost:8888/inhabitent'
+  });//'localhost[:port-here]/[your-dir-name-here]if not working, check it later
 
   gulp.watch(files).on('change', browserSync.reload);
 });

@@ -17,6 +17,18 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: "Novecentos", sans-serif;
+	letter-spacing: 2px;
+    text-transform: uppercase;
+}
+h3{
+	color:$color_green;
+}
+
+h4{
+	color: $color_yellow;
+	font-size: 1.2rem;
+    margin-bottom: .75rem;
 }
 
 /* Copy */

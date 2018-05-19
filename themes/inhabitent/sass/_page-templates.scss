@@ -1,5 +1,263 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1120px;
+}
+/* Front page front-page.php */
+h2{
+	font-size: 2.4rem;
+	font-weight: 400;
+	margin-bottom: 3.75rem;
+	text-align: center;
+}
+.front{
+    margin-bottom: 5rem;
+}
+/*Front page -> Banner*/
+.front-page-banner{
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url('../../img/home-hero.jpg') no-repeat top;
+    background-size: cover,cover;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-/* Front page */
+/*Front page -> Journal section*/
+.blog-posts-container{
+	display: flex;
+	justify-content: space-between;
+	.blog-posts-single{
+		flex-basis: 33%;
+		border: 1px solid #e1e1e1;
+		position: relative;
+		h3{
+			font-size: 1.3rem;
+			a{
+				color:$color_green;
+				&:hover{
+					color:black;
+				}
+			}
+		}
+		img{
+			height: 250px;
+		}
+	}
+	.blog-posts-single-text{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: .75rem;
+	}
+	.blog-post-button{
+		bottom: .75rem;
+		left: .75rem;
+		width: 40%;
+		border: 1px solid black;
+		padding: 5px;
+		text-align: center;
+		&:hover{
+			background-color:$color_green;
+			border: 1px solid $color_green;
+			color: #fff;
+		}
+		a{
+			text-transform: uppercase;
+			font-family: $font_second;
+			color: black;
+			&:hover{
+				color: white;
+			}
+		}
+	} 
+}//end of blog-posts-container
+
+/*Front page -> Adventures section*/
+.adventures-posts-container{
+	display: grid;
+	grid-gap:14px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	.adventures-posts-single{
+		position: relative;
+			img{
+			display: inline-block;
+			object-fit: cover; //https://www.w3schools.com/css/css3_object-fit.asp
+			width: 100%; 
+			//https://www.w3schools.com/cssref/css3_pr_filter.asp
+			filter: contrast(80%) brightness(70%);
+		}
+	}
+	.adventures-posts-single-text{
+		position: absolute;
+		top:0;
+		margin: 25px;
+			h3{
+				font-size: 3rem;
+				line-height: 1.25rem;
+				margin: 20px 0;
+				line-height: 1;
+			}
+			.entry-title a{
+				font-family: $font__main;
+				font-weight: 400;
+				text-transform: none;
+				color: white;
+				&:hover{
+				  color:$color_yellow;
+				  opacity: 50%;
+				} 
+			}
+			.adventures-post-button{
+				padding: 5px;
+				// width: 40%;
+				text-align: center;
+				font-family: $font_second;
+				text-transform: uppercase;
+				border: 1px solid white;
+				&:hover{
+					background-color:$color_green;
+					border: 1px solid $color_green;
+				}
+				   a{
+					color: white;
+				   }
+			  }	
+	}
+	.adventures-posts-single:nth-child(1){
+		grid-row-start: span 2;
+		grid-column-start: span 2;
+		height: 552.5px;
+		img{
+		  height: 552.5px; 
+		}
+	  }
+	.adventures-posts-single:nth-child(2){
+		grid-column-start: span 2;
+		height: 268.75px; 
+		img{
+		  height: 268.75px; 
+		}
+	  }
+	.adventures-posts-single:nth-child(3){
+		height: 268.75px; 
+		img{
+		  height: 268.75px; 
+		}
+		.adventures-posts-single-text{
+			h3{
+			  font-size: 1.6rem;
+			  line-height: 2.2rem;
+			  margin: 20px 0;
+			}
+		  }
+	}
+	.adventures-posts-single:nth-child(4){
+		height: 268.75px; 
+		img{
+		  height: 268.75px; 
+		}
+		.adventures-posts-single-text{
+			h3{
+			  font-size: 1.6rem;
+			  line-height: 2.2rem;
+			  margin: 20px 0;
+			}
+		  }
+	  }
+}   // end of adventures-posts-container 
+.adventures-button{
+	background: #248a83;
+    color: #fff;
+    font-family: $font_second;
+    font-size: 1.2rem;
+    padding: 5px;
+	text-transform: uppercase;
+	text-align: center;
+    width: 20%;
+    margin-top: 1.2rem;
+	a{
+		color:white;
+	}
+}
+
+/*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
+.blog, .single-post, .archive{
+  .post{
+    margin-bottom: 80px;
+    .entry-header{
+      position: relative;
+      img{
+        width: 100%;
+        display: block;
+      }
+      .entry-title{
+        position: absolute;
+        left: 0;
+        top: 8px;
+        background-color: $color_green;
+        width: 570px;
+        padding: 15px 25px;
+        line-height: 40px;
+        a{
+          color: white;
+          font-size: 2rem;
+          font-weight: 700;
+          &:hover{
+            color: $color_yellow;
+          }
+        }
+        &:not(.blog){
+          color: white;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+      }
+      .entry-meta{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: $color_green;
+        padding: 5px 15px;
+        color: white;
+        font-family: $font_second;
+        text-transform: uppercase;
+        span{
+          color: white;
+          font-family: $font_second;
+          text-transform: uppercase;
+          &:not(.blog){
+            a{
+              color: white;
+              font-family: $font_second;
+              text-transform: uppercase;
+              &:hover{
+                color: $color_yellow;
+              }
+            }
+          }
+        }  
+      } // end of .entry-meta
+    } // end of .entry-header
+  } // end of .post
+} // end of .blog, .single-post
+.social-buttons {
+	margin:1.5rem 0;
+	display: flex;
+	.button{
+		border: 1px solid black;
+		margin-right: 10px;
+		&:hover{
+			border: 1px solid $color_green;
+		}	
+	}
+}
+
+
+
+ 
