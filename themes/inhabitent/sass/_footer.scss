@@ -29,6 +29,9 @@
 	 a{
 		color: #fff;
 		text-decoration: none;
-		width: 280px;
-		}
+        width: 280px;
+        &:hover{
+            text-decoration: underline;
+        }
+	}
 }
