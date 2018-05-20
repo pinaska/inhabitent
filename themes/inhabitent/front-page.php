@@ -14,20 +14,10 @@
 
 get_header(); ?>
 
-	<!-- <div id="primary" class="content-area"> checking if the side can be full-width-->
-	<div>
-		<!-- <main id="main" class="site-main" role="main"> checking if the side can be full-width-->
-		<main>
-		
-		<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-				<?php get_template_part( 'template-parts/content' ); ?>
-
-			<?php endwhile; ?>
-			<?php the_posts_navigation(); ?>
-
-			<section class=" front-page-banner">
+			<section class="front-page-banner">
 			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inhabitent-logo-full.svg" alt="Inhabitent logo"/></a>
 			</section><!--banner-->
 

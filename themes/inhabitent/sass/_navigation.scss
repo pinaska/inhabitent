@@ -95,6 +95,69 @@ a {
 	}
 }
 
+.site-header{
+	background-color: rgba(255, 255, 255, 0.9);
+	border-bottom:black;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	.container{
+		height: 50px;
+		// width: 1120px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		.site-branding{
+			flex-basis: 20%;
+			display: flex;
+			align-items: center;	
+			.header-logo{//cannot position nicely img inside the navbar
+				.logo{
+					width: 50px;
+					height: 33.25px;
+					background-size: cover;
+					background-image: url("../../img/inhabitent-logo-tent.svg");		
+				}
+					
+			}
+		} // end of .site-branding
+		.main-navigation{
+			flex-basis: 80%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			
+			.menu-main-menu-container{
+				padding-right: 10px;
+				font-family: $font_second;
+				text-transform: uppercase;
+				li{
+					margin-left: 30px;
+				}
+			}
+
+			.header-search{
+				.search-form{
+					.search-field{
+						display: none;
+						// width: 0;
+						// padding: 0;
+						// border: none;
+						// background-color: transparent;
+					}
+					.search-field-focus{
+						width: 200px;
+						padding-left: 5px;
+					}
+				}
+			} // end of .header-search
+
+					
+		} // end of .main-navigation
+	} // end of .container
+} // end of .site-header
+
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
