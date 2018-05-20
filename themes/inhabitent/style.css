@@ -1094,6 +1094,36 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
     .social-buttons .button:hover {
       border: 1px solid #248A83; }
 
+/* error 404 page */
+.error404 .site-main .error-404 .page-header h1 {
+  font-size: 2.3rem;
+  margin-top: 0;
+  margin-bottom: 50px;
+  line-height: 2.3rem; }
+
+.error404 .site-main .error-404 .search-form fieldset {
+  margin-left: 0; }
+
+.error404 .site-main .error-404 .search-form .search-icon {
+  display: none; }
+
+.error404 .site-main .error-404 .search-form label {
+  margin-left: 0; }
+
+.error404 .site-main .error-404 .page-content .widget .widgettitle {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin-top: 50px; }
+
+.error404 .site-main .error-404 .page-content .widget ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0; }
+  .error404 .site-main .error-404 .page-content .widget ul li a {
+    font-family: "Merriweather", serif;
+    text-transform: none; }
+
 /*Footer*/
 /* FOOTER*/
 .footer-widget {
