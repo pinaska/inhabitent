@@ -287,6 +287,12 @@ margin: 0 auto;
         }  
       } // end of .entry-meta
     } // end of .entry-header
+    .cat-links, .tags-links{
+    	display: inline-block;
+    font-family: Novecento Sans Web,sans-serif;
+    text-transform: uppercase;
+    margin-right: 1.5rem;
+    }
   } // end of .post
 } // end of .blog, .single-post
 .social-buttons {
@@ -295,9 +301,53 @@ margin: 0 auto;
     & .button-black-border{
     	font-size: .9rem;
     	margin-right: 10px;
+    	width: 100px;
+    	text-align: center;
     }
 }//end of social buttons
 
+.comments-area{
+	.comment{
+		padding-top: 1.5rem;
+	}
+	article{
+		padding-bottom: 1.5rem;
+	}
+	h2, h3{
+		font-size:2.1rem;
+		color: #2f1339;
+	}
+	.comment-body{
+		display:flex;
+	}
+
+	ol{
+	margin-left: 0;
+  	padding-left: 0;
+   li {
+   	display: inherit;
+   	border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    //how to not make the first top bottom?
+    }
+	}
+	
+	.comment-author-avatar{
+		border-radius: 50%;
+    height: 64px;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    width: 64px;
+	}
+	.comment-author cite {
+    font-style: normal;
+    font-weight: bold;
+}
+.comment-metadata {
+    color:$color_grey_light;
+    margin-bottom: .75rem;
+}
+}
 
 /* error 404 page */
 .error404{
