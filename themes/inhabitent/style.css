@@ -422,59 +422,75 @@ a {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
-button,
+button.button-green,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
+input[type="submit"], .button-green, a.button-green {
+  border: 1px solid #248A83;
+  background: #248A83;
+  color: #ffff;
+  font-size: 1rem;
+  font-family: "Novecentos", sans-serif;
+  text-transform: uppercase;
   line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
+  padding: 10px; }
+  button.button-green:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
+  input[type="submit"]:hover, .button-green:hover, a.button-green:hover {
+    -webkit-filter: contrast(80%) brightness(80%);
+            filter: contrast(80%) brightness(80%);
+    color: #ffff; }
+  button.button-green:active, button.button-green:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="reset"]:active,
   input[type="reset"]:focus,
   input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+  input[type="submit"]:focus, .button-green:active, .button-green:focus, a.button-green:active, a.button-green:focus {
+    -webkit-filter: contrast(80%) brightness(85%);
+            filter: contrast(80%) brightness(85%);
+    color: #ffff; }
 
-.button {
+button.button-black-border,
+.button-black-border,
+a.button-black-border {
+  border: 1px solid black;
   padding: 10px;
-  text-align: center;
   font-family: "Novecentos", sans-serif;
   text-transform: uppercase;
-  border: 1px solid white; }
-  .button:hover {
-    background-color: #248A83;
-    border: 1px solid #248A83;
-    color: white; }
-  .button a {
-    color: white; }
+  font-size: 1rem;
+  color: black;
+  background-color: white; }
+  button.button-black-border:hover,
+  .button-black-border:hover,
+  a.button-black-border:hover {
+    background: #248A83;
+    color: white;
+    border: 1px solid #248A83; }
+  button.button-black-border:active, button.button-black-border:focus,
+  .button-black-border:active,
+  .button-black-border:focus,
+  a.button-black-border:active,
+  a.button-black-border:focus {
+    background: #1f7670;
+    border: 1px solid #1f7670; }
 
-.reversed-button {
-  background-color: #248A83;
-  border: 1px solid #248A83;
-  color: white; }
-  .reversed-button a {
-    color: white; }
+a.btn-white-border {
+  padding: 10px;
+  font-family: "Novecentos", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent; }
+  a.btn-white-border:hover {
+    background: #248A83;
+    color: white;
+    border: 1px solid #248A83; }
+  a.btn-white-border:active, a.btn-white-border:focus {
+    background: #1f7670;
+    border: 1px solid #1f7670; }
 
 /* Fields */
 input[type="text"],
@@ -546,7 +562,7 @@ a {
   a:visited {
     color: #248A83; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -924,15 +940,6 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
       width: 70px; }
     .product-container .single-product p {
       margin-bottom: 1.5rem; }
-    .product-container .single-product .reversed-button {
-      width: 60%;
-      margin: 0 auto; }
-      .product-container .single-product .reversed-button a {
-        color: white;
-        font-family: "Novecentos", sans-serif;
-        padding: 5px;
-        text-align: center;
-        text-transform: uppercase; }
 
 /*Front page -> Journal section*/
 .blog-posts-container {
@@ -948,7 +955,8 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
     border: 1px solid #e1e1e1;
     position: relative; }
     .blog-posts-container .blog-posts-single h3 {
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin-bottom: 3.75rem; }
       .blog-posts-container .blog-posts-single h3 a {
         color: #248A83; }
         .blog-posts-container .blog-posts-single h3 a:hover {
@@ -967,23 +975,12 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: .75rem; }
-  .blog-posts-container .blog-post-button {
+  .blog-posts-container .button-black-border {
+    position: absolute;
     bottom: .75rem;
     left: .75rem;
-    width: 40%;
-    border: 1px solid black;
-    padding: 5px;
-    text-align: center; }
-    .blog-posts-container .blog-post-button:hover {
-      background-color: #248A83;
-      border: 1px solid #248A83;
-      color: #fff; }
-    .blog-posts-container .blog-post-button a {
-      text-transform: uppercase;
-      font-family: "Novecentos", sans-serif;
-      color: black; }
-      .blog-posts-container .blog-post-button a:hover {
-        color: white; }
+    font-size: .9rem;
+    color: #000; }
 
 /*Front page -> Adventures section*/
 .adventures-posts-container {
@@ -1120,11 +1117,9 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .social-buttons .button {
-    border: 1px solid black;
+  .social-buttons .button-black-border {
+    font-size: .9rem;
     margin-right: 10px; }
-    .social-buttons .button:hover {
-      border: 1px solid #248A83; }
 
 /* error 404 page */
 .error404 .site-main .error-404 .page-header h1 {
