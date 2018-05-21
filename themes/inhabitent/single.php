@@ -15,18 +15,18 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 			<div class="social-buttons">
-				<div type="button" class="button">
-					<i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+				<div type="button" class="button-black-border">
+					<i class="fab fa-facebook" aria-hidden="true"></i>
 					like
-			</div>
-				<div type="button" class="button">
-					<i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+				</div>
+				<div type="button" class="button-black-border">
+					<i class="fab fa-twitter" aria-hidden="true"></i>
 					tweet
-			</div>
-				<div type="button" class="button">
-					<i class="fa fa-pinterest fa-fw" aria-hidden="true"></i>
+				</div>
+				<div type="button" class="button-black-border">
+					<i class="fab fa-pinterest" aria-hidden="true"></i>
 					pin
-			</div>
+				</div>
 			</div>
 
 
