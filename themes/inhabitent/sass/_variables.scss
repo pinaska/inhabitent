@@ -1,12 +1,18 @@
 // Structure
 
 $base__space-unit: 1.5rem;
+$solid_border: 1px solid #e1e1e1;
+$dashed_border: 1px dashed #c8c8c8;
 
 // Colors
 
 $color__background-body: #fff;
 $color_yellow: #d99054;
+$color_yellow_light:#f0e4d1;
 $color_green:#248A83;
+$color_purple: #2f1339;
+$color_grey_light: #a1a1a1;
+$color_grey_medium: #808080;
 $color__text-main: #404040;
 
 $color__background-screen: #f1f1f1;
@@ -19,7 +25,7 @@ $color__border-abbr: #666;
 
 $color__link: #248A83;
 $color__link-visited: #248A83;
-$color__link-hover: midnightblue;
+$color__link-hover: #2f1339;
 
 // Typography
 

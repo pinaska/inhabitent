@@ -65,7 +65,7 @@ margin: 0 auto;
 	justify-content: space-between;
 	text-align: center;
 	.single-product{
-		border: 1px solid #e1e1e1;
+	border: 1px solid #e1e1e1;
     border-top-width: 5px;
     flex-basis: 25%;
     max-width: 23.5%;
@@ -80,17 +80,6 @@ margin: 0 auto;
 		p{
 			margin-bottom: 1.5rem;
 		}
-		.reversed-button{
-			width:60%;
-			margin: 0 auto;
-			a{
-				color:white;
-				font-family: $font_second;
-				padding: 5px;
-				text-align: center;
-				text-transform: uppercase;
-			}
-		}
 	}
 }//end of product-container
 
@@ -104,6 +93,7 @@ margin: 0 auto;
 		position: relative;
 		h3{
 			font-size: 1.3rem;
+			margin-bottom: 3.75rem;
 			a{
 				color:$color_green;
 				&:hover{
@@ -120,28 +110,14 @@ margin: 0 auto;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: .75rem;
-	}
-	.blog-post-button{
-		bottom: .75rem;
-		left: .75rem;
-		width: 40%;
-		border: 1px solid black;
-		padding: 5px;
-		text-align: center;
-		&:hover{
-			background-color:$color_green;
-			border: 1px solid $color_green;
-			color: #fff;
-		}
-		a{
-			text-transform: uppercase;
-			font-family: $font_second;
-			color: black;
-			&:hover{
-				color: white;
-			}
-		}
 	} 
+	.button-black-border{
+		position:absolute;
+    	bottom: .75rem;
+    	left: .75rem;
+    	font-size:.9rem;
+    	color:#000;
+	}
 }//end of blog-posts-container
 
 /*Front page -> Adventures section*/
@@ -316,13 +292,10 @@ margin: 0 auto;
 .social-buttons {
 	margin:1.5rem 0;
 	display: flex;
-	.button{
-		border: 1px solid black;
-		margin-right: 10px;
-		&:hover{
-			border: 1px solid $color_green;
-		}	
-	}
+    & .button-black-border{
+    	font-size: .9rem;
+    	margin-right: 10px;
+    }
 }//end of social buttons
 
 
