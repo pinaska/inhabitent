@@ -27,30 +27,30 @@ get_header(); ?>
 					<article class="single-product">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/do.svg" alt="orange-paper-map"/>
 						<p>Get back to nature with all the tools and toys you need to enjoy the great outdoors.</p>
-						<div class="reversed-button">
-							<a href="http://">do stuff</a>
-						</div>
+						<p>
+							<a class="button-green" href="http://">do stuff</a>
+						</p>
 					</article>
 					<article class="single-product">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/eat.svg" alt="orange-mug"/>
 						<p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
-						<div class="reversed-button">
-							<a href="http://">eat stuff</a>
-						</div>
+						<p>
+							<a class="button-green" href="http://">eat stuff</a>
+						</p>
 					</article>
 					<article class="single-product">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sleep.svg" alt="orange-sleeping-bag"/>
 						<p>Get a good night's rest in the wild in a home away from home that travels well.</p>
-						<div class="reversed-button">
-							<a href="http://">sleep stuff</a>
-						</div>
+						<p>
+							<a class="button-green" href="http://">sleep stuff</a>
+						</p>
 					</article>
 					<article class="single-product">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/wear.svg" alt="orange-tuk"/>
 						<p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
-						<div class="reversed-button">
-							<a href="http://">wear stuff</a>
-						</div>
+						<p>
+							<a class="button-green" href="http://">wear stuff</a>
+						</p>
 						</article>
 					</div>
 
@@ -73,8 +73,8 @@ get_header(); ?>
 								<div class="blog-post-title">
 									<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 								</div><!--blog-posts-title-->
-								<div class="blog-post-button">
-									<a href="<?php the_permalink() ?>">read entry</a>
+								<div>
+									<a class="button-black-border" href="<?php the_permalink() ?>">read entry</a>
 								</div><!--blog-posts-title-->
 							</div><!--blog-posts-single-text-->
 					</article><!--blog-posts-single-->
@@ -101,13 +101,13 @@ get_header(); ?>
 								</div><!--blog-posts-title-->
 							</div><!--blog-posts-single-text-->
 					</article><!--blog-posts-single-->
-					<article class="adventures-posts-single b">
+					<article class="adventures-posts-single">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/beach-bonfire.jpg" alt="bonfire-on-the-beach"/>
 					</article>
-					<article class="adventures-posts-single c">
+					<article class="adventures-posts-single">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/mountain-hikers.jpg" alt="people-on-the-moutain-trail"/>
 					</article>
-					<article class="adventures-posts-single d">
+					<article class="adventures-posts-single">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/night-sky.jpg" alt="sky-and-stars-at-night"/>
 					</article>
 
