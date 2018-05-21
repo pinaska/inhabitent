@@ -31,6 +31,31 @@ input[type="submit"] {
 	}
 }
 
+.button{
+	padding: 10px;
+	// width: 40%;
+	text-align: center;
+	font-family: $font_second;
+	text-transform: uppercase;
+	border: 1px solid white;
+	&:hover{
+		background-color:$color_green;
+		border: 1px solid $color_green;
+		color: white;
+	}
+	   a{
+		color: white;
+	   }
+  }
+  .reversed-button{
+	background-color:$color_green;
+	border: 1px solid $color_green;
+	color: white;
+	a{
+		color: white;
+	}
+}
+
 /* Fields */
 
 input[type="text"],
@@ -41,7 +66,9 @@ input[type="search"],
 textarea {
 	color: #666;
 	border: 1px solid #ccc;
-	border-radius: 3px;
+	background-color:#f4f4f4;
+	width:100%;
+	// border-radius: 3px;
 
 	&:focus {
 		color: #111;
@@ -59,4 +86,35 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+label{
+	font-family:$font_second;
+	text-transform:uppercase;
+	font-size:1.1rem;
+	display:block;
+	margin-bottom:10px;
+	.required{
+		color:$color_yellow;
+	}
+}
+/*comments*/
+.comment-form{
+	display: flex;
+	flex-wrap: wrap;
+
+	.comment-form-comment, .comment-form-url{
+		flex-basis: 100%;
+		margin: 15px 0;
+	}
+	.comment-form-author{
+		flex-basis: 50%;
+		padding-right: 10px;
+		margin: 15px 0;
+	}
+	.comment-form-email{
+		flex-basis: 50%;
+		padding-left: 10px;
+		margin: 15px 0;
+	}
 }

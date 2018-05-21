@@ -48,30 +48,7 @@
 	display: block;
 }
 
-.button{
-	padding: 10px;
-	// width: 40%;
-	text-align: center;
-	font-family: $font_second;
-	text-transform: uppercase;
-	border: 1px solid white;
-	&:hover{
-		background-color:$color_green;
-		border: 1px solid $color_green;
-		color: white;
-	}
-	   a{
-		color: white;
-	   }
-  }
-  .reversed-button{
-	background-color:$color_green;
-	border: 1px solid $color_green;
-	color: white;
-	a{
-		color: white;
-	}
-}
+
 
 
 

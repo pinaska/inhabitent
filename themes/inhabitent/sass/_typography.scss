@@ -17,8 +17,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Novecentos", sans-serif;
-	letter-spacing: 2px;
+	font-family:$font_second;
+	letter-spacing:inherit;
     text-transform: uppercase;
 }
 h3{
