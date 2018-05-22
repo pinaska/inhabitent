@@ -1197,33 +1197,41 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
     font-family: "Merriweather", serif;
     text-transform: none; }
 
-/*Footer*/
-/* FOOTER*/
-.footer-widget {
+/*about full-width page*/
+/* About page */
+.page-template-about .custom-hero {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .footer-widget .footer-widget-item {
-    margin: 3rem 0;
-    padding-right: 1.5rem;
-    width: 25%; }
-    .footer-widget .footer-widget-item:last-child {
-      width: 50%;
-      padding: 25px 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #aaa;
+  background-size: cover; }
+  .page-template-about .custom-hero h1 {
+    display: inline-block;
+    color: white;
+    position: absolute;
+    font-size: 3rem; }
+  .page-template-about .custom-hero img {
+    width: 100%;
+    -webkit-filter: brightness(50%);
+            filter: brightness(50%); }
 
-.footer-copyright {
-  text-align: center;
-  font-family: Novecento Sans Web,sans-serif;
-  padding: 1.5rem 0;
-  text-align: center;
-  text-transform: uppercase; }
+.page-template-about .entry-content {
+  width: 800px;
+  margin: 80px auto; }
+  .page-template-about .entry-content h2 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+    margin-top: 50px;
+    text-align: center; }
 
+/*Footer*/
 .site-footer {
   background: url(../../img/dark-wood@2x.png);
   background-size: 512px 512px;
@@ -1234,3 +1242,29 @@ body:not(.home):not(.page-template-about):not(.single-product):not(.post-type-ar
     width: 280px; }
     .site-footer a:hover {
       text-decoration: underline; }
+  .site-footer .footer-widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .site-footer .footer-widget .footer-widget-item {
+      margin: 3rem 0;
+      padding-right: 1.5rem;
+      width: 25%; }
+      .site-footer .footer-widget .footer-widget-item:last-child {
+        width: 50%;
+        padding: 25px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+      .site-footer .footer-widget .footer-widget-item i {
+        font-size: 1.25rem;
+        margin-right: .5rem; }
+  .site-footer .footer-copyright {
+    text-align: center;
+    font-family: Novecento Sans Web,sans-serif;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase; }
