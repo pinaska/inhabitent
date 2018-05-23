@@ -2,9 +2,9 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-
 //default style for pages with sidebar
-.site-content{
+.blog, .single-post, .error404, .page, .archive{
+	.site-content{
       width: 1120px;
       margin: 0 auto;
       padding-top: 50px;
@@ -21,23 +21,18 @@
         border-left: $solid_border;
       }  
 		} 
-
-		
-//default style for pagest without sidebar
-// .home{
-// 		.site-content{
-// 			width: 100%;
-// 			display: block;
-// 			.content-area{
-// 				width:100%;
-// 				margin: 0 auto;
-// 				padding: 0;
-// 				display: block;
-// 				flex-basis: 100%;
-// 			}
-// 		}
-// }
-
+	}
+	.home, .page-template-about, .tax-product_type{
+		.site-content{
+			width: 100%;
+			padding-top: 50px;
+			display: block;
+			.content-area{
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
 
 .container {
 	margin: 0 auto;	
@@ -66,6 +61,9 @@
     background-size: cover,cover;
 		height:100vh;
 		width: 100%;
+		img{
+
+		}
 }
 /*Front page -> Shop products*/
 .product-container{
@@ -80,6 +78,9 @@
 		padding: .75rem;
 		&:hover{
 			border:1px solid $color_yellow;
+		}
+		a{
+			color: white;
 		}
 		img{
 			height: 70px;
@@ -438,7 +439,7 @@
 } // end of .page-template-about
 
 ///* Shop page style */
-.post-type-archive-product, .tax-product-type{
+.post-type-archive-product, .tax-product_type{
 	.content-area{
 		padding-top: 3rem;
     padding-bottom: 3rem;
@@ -448,8 +449,8 @@
       text-align: center;
       border-bottom: $dashed_border;
       padding-top: 3rem;
-    	padding-bottom: 3rem;
-    	margin-bottom: 3rem;
+//     	padding-bottom: 3rem;
+//     	margin-bottom: 3rem;
         li{
 					display: inline-block;
 					font-family: $font_second;
