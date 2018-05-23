@@ -26,6 +26,7 @@ function red_starter_setup() {
 		'primary' => esc_html( 'Primary Menu' ),
 	) );
 
+
 	// Switch search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
 		'search-form',
@@ -38,6 +39,12 @@ function red_starter_setup() {
 }
 endif; // red_starter_setup
 add_action( 'after_setup_theme', 'red_starter_setup' );
+
+// register extra menu for product custom taxonomies
+function register_my_menu() {
+	register_nav_menu('product-menu',__( 'Product Menu' ));
+  }
+  add_action( 'init', 'register_my_menu' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

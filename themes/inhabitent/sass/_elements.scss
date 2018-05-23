@@ -18,6 +18,7 @@ body {
 	display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 blockquote, q {
@@ -44,11 +45,15 @@ ul, ol {
 }
 
 ul {
-	list-style: none;;
+	list-style: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 ol {
 	list-style: decimal;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 li > ul,

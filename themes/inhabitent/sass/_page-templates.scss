@@ -2,31 +2,42 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-body{
-  // for .blog, .single-post .page .error404, .search-results
-  &:not(.home):not(.page-template-about):not(.single-product):not(.post-type-archive):not(.tax-product-type):not(.post-type-archive-adventure):not(.single-adventure) {
-    .site-content{
+
+//default style for pages with sidebar
+.site-content{
       width: 1120px;
       margin: 0 auto;
       padding-top: 50px;
       display: flex;
 
       .content-area{
-				flex-basis: 70%;
-				border-right: 1px solid #e1e1e1;
-				padding-right: 5%;
-				padding-top: 3rem;// on contact page there is no padding-top hmmmmm
-				padding-bottom: 3rem;
+        flex-basis: 70%;
+        padding: 60px 50px 60px 0;
       }
       .widget-area{ // sidebar
         flex-basis: 30%;
         padding-top: 20px;
         padding-left: 60px;
-        border-left: black;
+        border-left: $solid_border;
       }  
-    } // end of .site-content 
-  }   
-} // end of body
+		} 
+
+		
+//default style for pagest without sidebar
+.home{
+		.site-content{
+			width: 100%;
+			display: block;
+			.content-area{
+				width:100%;
+				margin: 0 auto;
+				padding: 0;
+				display: block;
+				flex-basis: 100%;
+			}
+		}
+}
+
 
 .container {
 	margin: 0 auto;	
@@ -45,10 +56,7 @@ body{
 			text-align: center;
 		}
 } 
-.home .site-content{
-width:100%;
-margin: 0 auto;
-}
+
 /*Front page -> Banner*/
 .front-page-banner{
 		display: flex;
@@ -64,8 +72,8 @@ margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
-	.single-product{
-	border: 1px solid #e1e1e1;
+	.single-product-item{
+		border: 1px solid #e1e1e1;
     border-top-width: 5px;
     flex-basis: 25%;
     max-width: 23.5%;
@@ -321,16 +329,13 @@ margin: 0 auto;
 		display:flex;
 	}
 
-	ol{
-	margin-left: 0;
-  	padding-left: 0;
    li {
    	display: inherit;
    	border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
     //how to not make the first top bottom?
     }
-	}
+
 	
 	.comment-author-avatar{
 		border-radius: 50%;
@@ -381,17 +386,13 @@ margin: 0 auto;
           line-height: 2.5rem;
           margin-top: 50px;
           }
-          ul{   
-            list-style: none;
-            padding-left: 0;
-            margin-left: 0;
             li{
               a{
                 font-family: $font__main;
                 text-transform: none;
               }
             }
-          }
+          
         }
       } // end of .page-content
     } // end of .error-404
@@ -435,3 +436,85 @@ margin: 0 auto;
     }
   }
 } // end of .page-template-about
+
+///* Shop page style */
+.post-type-archive-product, .tax-product-type{
+	.content-area{
+		padding-top: 3rem;
+    padding-bottom: 3rem;
+	}
+  .site-main{
+    .page-header{
+      text-align: center;
+      border-bottom: $dashed_border;
+      padding-top: 3rem;
+    	padding-bottom: 3rem;
+    	margin-bottom: 3rem;
+        li{
+					display: inline-block;
+					font-family: $font_second;
+					text-transform: uppercase;
+					margin: 0 1.5rem;
+					font-size: 1.2rem;
+      }
+      
+    }
+    .product-grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 15px;
+      margin-bottom: 30px;
+      grid-row-gap: 15px;
+      .product-grid-item{
+        border: $solid_border;
+        .product-item-thumbnail{
+          overflow: hidden;
+          height: 250px;
+          border-bottom: 5px solid #e1e1e1;
+          img{
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .product-item-info{
+          background-color: white;
+          border-top-width: 5px;
+		  	font-size: .9rem;
+		  	font-family: $font__main;
+		  	display: flex;
+		  	padding: .75rem 1rem;
+          p{
+            font-weight:lighter;
+            }
+          }
+          
+        }
+    } // end of .product-grid
+  } // end of .site-main
+} // end of .post-type-archive-product
+
+//SINGLE-PRODUCT shop
+.single-product{
+		.site-main{
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			display: flex;
+			justify-content:space-between;
+			.entry-title{
+				color:$color_yellow;
+				line-height: 1.25;
+			}
+			.price{
+						font-family:$font_second;
+						font-size: 1.8rem;
+						margin-top: 0;
+			}
+			.single-product-img{
+				flex-basis: 48%;
+			}
+			.single-product-content{
+				flex-basis: 48%;
+			}
+		}
+}

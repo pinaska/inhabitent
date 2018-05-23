@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="home content-area">
 		<main id="main" class="site-main" role="main">
 
 			<section class="front-page-banner">
@@ -24,28 +24,28 @@ get_header(); ?>
 			<section class="front shop container">
 				<h2>SHOP STUFF</h2>	
 				<div class="product-container">
-					<article class="single-product">
+					<article class="single-product-item">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/do.svg" alt="orange-paper-map"/>
 						<p>Get back to nature with all the tools and toys you need to enjoy the great outdoors.</p>
 						<p>
 							<a class="button-green" href="http://">do stuff</a>
 						</p>
 					</article>
-					<article class="single-product">
+					<article class="single-product-item">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/eat.svg" alt="orange-mug"/>
 						<p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
 						<p>
 							<a class="button-green" href="http://">eat stuff</a>
 						</p>
 					</article>
-					<article class="single-product">
+					<article class="single-product-item">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sleep.svg" alt="orange-sleeping-bag"/>
 						<p>Get a good night's rest in the wild in a home away from home that travels well.</p>
 						<p>
 							<a class="button-green" href="http://">sleep stuff</a>
 						</p>
 					</article>
-					<article class="single-product">
+					<article class="single-product-item">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/wear.svg" alt="orange-tuk"/>
 						<p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
 						<p>
