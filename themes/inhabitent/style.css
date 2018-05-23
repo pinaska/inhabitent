@@ -467,6 +467,10 @@ a.button-black-border {
   font-size: 1rem;
   color: black;
   background-color: white; }
+  button.button-black-border a,
+  .button-black-border a,
+  a.button-black-border a {
+    color: black; }
   button.button-black-border:hover,
   .button-black-border:hover,
   a.button-black-border:hover {
@@ -865,18 +869,18 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.blog .site-content, .single-post .site-content, .error404 .site-content, .page .site-content, .archive .site-content {
+.blog .site-content, .single-post .site-content, .error404 .site-content, .page .site-content, .archive .site-content, .search .site-content {
   width: 1120px;
   margin: 0 auto;
   padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .blog .site-content .content-area, .single-post .site-content .content-area, .error404 .site-content .content-area, .page .site-content .content-area, .archive .site-content .content-area {
+  .blog .site-content .content-area, .single-post .site-content .content-area, .error404 .site-content .content-area, .page .site-content .content-area, .archive .site-content .content-area, .search .site-content .content-area {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
     padding: 60px 50px 60px 0; }
-  .blog .site-content .widget-area, .single-post .site-content .widget-area, .error404 .site-content .widget-area, .page .site-content .widget-area, .archive .site-content .widget-area {
+  .blog .site-content .widget-area, .single-post .site-content .widget-area, .error404 .site-content .widget-area, .page .site-content .widget-area, .archive .site-content .widget-area, .search .site-content .widget-area {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     padding-top: 20px;
