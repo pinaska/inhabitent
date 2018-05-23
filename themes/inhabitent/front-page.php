@@ -14,48 +14,37 @@
 
 get_header(); ?>
 
-	<div id="primary" class="home content-area">
-		<main id="main" class="site-main" role="main">
 
+		<!--banner-->
 			<section class="front-page-banner">
 			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inhabitent-logo-full.svg" alt="Inhabitent logo"/></a>
 			</section><!--banner-->
 
+	<div id="primary" class="home content-area">
+		<main id="main" class="site-main" role="main">	
 			<section class="front shop container">
 				<h2>SHOP STUFF</h2>	
+
+				<?php $terms = get_terms(array (
+					'taxonomy' => 'product_type',
+					'hide_empty' => 0,
+				));
+				if(!empty ($terms) && ! is_wp_error($terms)) : ?>
 				<div class="product-container">
-					<article class="single-product-item">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/do.svg" alt="orange-paper-map"/>
-						<p>Get back to nature with all the tools and toys you need to enjoy the great outdoors.</p>
-						<p>
-							<a class="button-green" href="http://">do stuff</a>
-						</p>
-					</article>
-					<article class="single-product-item">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/eat.svg" alt="orange-mug"/>
-						<p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
-						<p>
-							<a class="button-green" href="http://">eat stuff</a>
-						</p>
-					</article>
-					<article class="single-product-item">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sleep.svg" alt="orange-sleeping-bag"/>
-						<p>Get a good night's rest in the wild in a home away from home that travels well.</p>
-						<p>
-							<a class="button-green" href="http://">sleep stuff</a>
-						</p>
-					</article>
-					<article class="single-product-item">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/wear.svg" alt="orange-tuk"/>
-						<p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
-						<p>
-							<a class="button-green" href="http://">wear stuff</a>
-						</p>
-						</article>
-					</div>
+					<?php  foreach($terms as $term) : ?>
+						<div class="single-product-item">
+							<img src="<?php echo get_stylesheet_directory_uri() . '/img/'. $term->slug;?>.svg" alt="<?php echo $term->name; ?>"/>
+							<p><?php echo $term->description;?></p>
+							<p>
+								<a class="button-green" href="<?php echo get_term_link( $term );?>">
+								<?php echo $term->name; ?> Stuff</a>
+							</p>
+			</div>	
+			<?php endforeach;?>
+			</div>
 
-
-			</section><!--shop-->
+			<?php endif;?>
+			</section><!--end of shop-->
 
 			<section class="front blog container">
 				<h2>INHABITENT JOURNAL</h2>
@@ -119,6 +108,5 @@ get_header(); ?>
 			</section><!--adventures-->
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 
 <?php get_footer(); ?>
