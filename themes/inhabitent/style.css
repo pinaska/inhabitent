@@ -883,17 +883,6 @@ object {
     padding-left: 60px;
     border-left: 1px solid #e1e1e1; }
 
-.home .site-content {
-  width: 100%;
-  display: block; }
-  .home .site-content .content-area {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    display: block;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
-
 .container {
   margin: 0 auto;
   width: 1120px; }
