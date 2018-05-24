@@ -616,7 +616,7 @@ a {
 
 .site-header {
   background-color: rgba(255, 255, 255, 0.9);
-  border-bottom: black;
+  border-bottom: 1px solid #a1a1a1;
   position: fixed;
   width: 100%;
   z-index: 3; }
@@ -643,6 +643,11 @@ a {
         height: 33.25px;
         background-size: cover;
         background-image: url("../../img/inhabitent-logo-tent.svg"); }
+      .site-header .container .site-branding .header-logo .logo_white {
+        width: 50px;
+        height: 33.25px;
+        background-size: cover;
+        background-image: url("../../img/inhabitent-logo-tent-white.svg"); }
     .site-header .container .main-navigation {
       -ms-flex-preferred-size: 80%;
           flex-basis: 80%;
@@ -666,6 +671,11 @@ a {
       .site-header .container .main-navigation .header-search .search-form .search-field-focus {
         width: 200px;
         padding-left: 5px; }
+
+.site-header-reversed {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  z-index: 1; }
 
 /* Small menu. */
 .menu-toggle,
@@ -872,7 +882,6 @@ object {
 .blog .site-content, .single-post .site-content, .error404 .site-content, .page .site-content, .archive .site-content, .search .site-content {
   width: 1120px;
   margin: 0 auto;
-  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -883,23 +892,34 @@ object {
   .blog .site-content .widget-area, .single-post .site-content .widget-area, .error404 .site-content .widget-area, .page .site-content .widget-area, .archive .site-content .widget-area, .search .site-content .widget-area {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 60px;
     border-left: 1px solid #e1e1e1; }
 
-.home .site-content, .page-template-about .site-content, .tax-product_type .site-content {
+.home .site-content, .page-template-about .site-content, .tax-product_type .site-content, .post-type-archive-adventure .site-content {
   width: 100%;
-  padding-top: 50px;
-  display: block; }
-  .home .site-content .content-area, .page-template-about .site-content .content-area, .tax-product_type .site-content .content-area {
+  display: block;
+  margin: 0 auto; }
+  .home .site-content .content-area, .page-template-about .site-content .content-area, .tax-product_type .site-content .content-area, .post-type-archive-adventure .site-content .content-area {
     width: 100%;
-    padding: 0; }
+    padding-top: 60px;
+    padding-bottom: 60px; }
 
 .container {
   margin: 0 auto;
   width: 1120px; }
 
 /* Front page front-page.php */
+.home .site-header {
+  background-color: transparent;
+  border-bottom: 0;
+  position: absolute;
+  text-shadow: 1px 1px 2px #323232; }
+  .home .site-header .main-navigation a {
+    color: white; }
+    .home .site-header .main-navigation ahover {
+      color: #d99054; }
+
 .home .front {
   margin-bottom: 5rem;
   width: 1120px; }
@@ -947,6 +967,8 @@ object {
       border: 1px solid #d99054; }
     .product-container .single-product-item a {
       color: white; }
+      .product-container .single-product-item ahover {
+        color: white; }
     .product-container .single-product-item img {
       height: 70px;
       width: 70px; }
@@ -1031,10 +1053,12 @@ object {
       text-align: center;
       font-family: "Novecentos", sans-serif;
       text-transform: uppercase;
-      border: 1px solid white; }
+      border: 1px solid white;
+      color: white; }
       .adventures-posts-container .adventures-posts-single-text .adventures-post-button:hover {
         background-color: #248A83;
-        border: 1px solid #248A83; }
+        border: 1px solid #248A83;
+        color: white; }
       .adventures-posts-container .adventures-posts-single-text .adventures-post-button a {
         color: white; }
   .adventures-posts-container .adventures-posts-single:nth-child(1) {
@@ -1077,6 +1101,23 @@ object {
   margin-top: 1.2rem; }
   .adventures-button a {
     color: white; }
+
+.single-adventure .site-header {
+  background-color: transparent;
+  border-bottom: 0;
+  position: absolute;
+  text-shadow: 1px 1px 2px #323232; }
+  .single-adventure .site-header .main-navigation a {
+    color: white; }
+
+.single-adventure .single-adventure-text {
+  max-width: 800px; }
+
+/*adventure archive*/
+.adventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px; }
 
 /*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
 .blog .post, .single-post .post, .archive .post {
@@ -1242,7 +1283,9 @@ object {
 .post-type-archive-product .site-main .page-header, .tax-product_type .site-main .page-header {
   text-align: center;
   border-bottom: 1px dashed #c8c8c8;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem; }
   .post-type-archive-product .site-main .page-header li, .tax-product_type .site-main .page-header li {
     display: inline-block;
     font-family: "Novecentos", sans-serif;
@@ -1275,19 +1318,31 @@ object {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      padding: .75rem 1rem; }
+      padding: .75rem 1rem;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
       .post-type-archive-product .site-main .product-grid .product-grid-item .product-item-info p, .tax-product_type .site-main .product-grid .product-grid-item .product-item-info p {
         font-weight: lighter; }
+      .post-type-archive-product .site-main .product-grid .product-grid-item .product-item-info .dots, .tax-product_type .site-main .product-grid .product-grid-item .product-item-info .dots {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        border-bottom: 1px dotted gray;
+        -webkit-transform: translateY(-5px);
+                transform: translateY(-5px); }
 
 .single-product .site-main {
   padding-top: 3rem;
-  padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .single-product .site-main .content-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
   .single-product .site-main .entry-title {
     color: #d99054;
     line-height: 1.25; }
