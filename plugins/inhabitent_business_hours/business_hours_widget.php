@@ -166,7 +166,6 @@ class Tent_Biz_Hours extends WP_Widget {
 
 } // end class
 
-// TODO: Remember to change 'Widget_Name' to match the class name definition
 add_action( 'widgets_init', function(){
      register_widget( 'Tent_Biz_Hours' );
 });
