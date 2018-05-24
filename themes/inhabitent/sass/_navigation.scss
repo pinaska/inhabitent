@@ -97,7 +97,7 @@ a {
 
 .site-header{
 	background-color: rgba(255, 255, 255, 0.9);
-	border-bottom:black;
+	border-bottom:1px solid $color_grey_light;
 	position: fixed;
 	width: 100%;
 	z-index: 3;
@@ -117,6 +117,12 @@ a {
 					height: 33.25px;
 					background-size: cover;
 					background-image: url("../../img/inhabitent-logo-tent.svg");		
+				}
+				.logo_white{
+					width: 50px;
+					height: 33.25px;
+					background-size: cover;
+					background-image: url("../../img/inhabitent-logo-tent-white.svg");		
 				}
 					
 			}
@@ -156,7 +162,12 @@ a {
 		} // end of .main-navigation
 	} // end of .container
 } // end of .site-header
-
+.site-header-reversed{
+	background-color: rgba(255, 255, 255, 0.1);
+	// position: fixed;
+    width: 100%;
+    z-index: 1;
+}
 
 /* Small menu. */
 .menu-toggle,
