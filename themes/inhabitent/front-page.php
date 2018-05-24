@@ -12,7 +12,7 @@
  */
 
 
-get_header(); ?>
+get_header('front'); ?>
 
 
 		<!--banner-->
@@ -76,36 +76,43 @@ get_header(); ?>
 
 			<section class="front adventures container">
 			<h2>LATEST ADVENTURES</h2>
-			
 				<div class="adventures-posts-container">
-					<article class="adventures-posts-single a">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/canoe-girl.jpg" alt="girl-in-the-canoe"/>
-						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('')?></a>
+					<?php
+					$args = array( 
+						'post_type' => 'adventure', 
+						'posts_per_page' => 4, 
+						'orderby' => 'date',
+						'order' => 'ASC'
+						);
+					$latest_adventure_posts = get_posts( $args ); // returns an array of posts
+					?>
+
+					<?php foreach ( $latest_adventure_posts as $post ) : setup_postdata( $post ); ?>
+					
+						<article class="adventures-posts-single">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( 'large' ); ?>
+							<?php endif; ?>
+
 							<div class="adventures-posts-single-text">
-								<div class="adventures-post-title">
-									<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-								</div><!--blog-posts-title-->
-								<div class="adventures-post-button">
-									<a href="<?php the_permalink() ?>">read more</a>
-								</div><!--blog-posts-title-->
-							</div><!--blog-posts-single-text-->
-					</article><!--blog-posts-single-->
-					<article class="adventures-posts-single">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/beach-bonfire.jpg" alt="bonfire-on-the-beach"/>
-					</article>
-					<article class="adventures-posts-single">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/mountain-hikers.jpg" alt="people-on-the-moutain-trail"/>
-					</article>
-					<article class="adventures-posts-single">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/night-sky.jpg" alt="sky-and-stars-at-night"/>
-					</article>
+								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+								<a class="adventures-post-button" href=<?php echo get_permalink() ?>>read more</a>    
+							</div><!-- .adventures-posts-single-text-->
+						</article><!-- adventures-posts-single -->
 
-				</div><!--adventures-posts-container-->	
+					<?php endforeach; wp_reset_postdata(); ?>
+
+				</div><!-- adventures-posts-container -->
+
+					 <div class="adventures-button">
+          				<a href=<?php echo get_post_type_archive_link( 'adventure' ) ?>>more adventure</a>
+					</div>
+			</section>
 
 
-          <div class="adventures-button"><a href=<?php echo get_post_type_archive_link( 'adventure' ) ?>>more adventure</a>
-				</div>
-			</section><!--adventures-->
+
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
