@@ -119,14 +119,7 @@ a {
 					height: 33.25px;
 					background-size: cover;
 					background-image: url("../../img/inhabitent-logo-tent.svg");		
-				}
-				.logo_white{
-					width: 50px;
-					height: 33.25px;
-					background-size: cover;
-					background-image: url("../../img/inhabitent-logo-tent-white.svg");		
-				}
-					
+				}				
 			}
 		} // end of .site-branding
 		.main-navigation{
@@ -147,10 +140,11 @@ a {
 			.header-search{
 				.search-form{
 					.search-field{
-						display: none;
-						// width: 0;
+						// display: none;
+						width: 0;
 						// padding: 0;
 						// border: none;
+						transition: 1s;
 						// background-color: transparent;
 					}
 					.search-field-focus{
