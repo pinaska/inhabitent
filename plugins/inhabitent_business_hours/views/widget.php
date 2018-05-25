@@ -3,7 +3,7 @@
 
 <p>
 
-<span><b>Monday-Friday:</b> </span> 
+<span class="bold">Monday-Friday:</span> 
     <?php echo $monday_friday ?>
 </p>
 
@@ -12,7 +12,7 @@
 
 <?php if(strlen( trim($saturday))>0): ?>
 <p>
-<span><b>Saturday:</b></span> 
+<span class="bold">Saturday:</span> 
 <?php echo $saturday ?>
 </p>
 
@@ -21,7 +21,7 @@
 <?php if(strlen( trim($sunday))>0): ?>
 
 <p>
-<span><b>Sunday:</b> </span> 
+<span class="bold">Sunday:</span> 
 <?php echo $sunday ?>
 </p>
 
