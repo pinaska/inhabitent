@@ -46,7 +46,15 @@ function inhabitent_dynamic_css(){
 	background:linear-gradient(to bottom, rgba(0,0,0,0.4)0%,rgba(0,0,0,0.4)100% ),
 	url({$image}) no-repeat center bottom;
 	background-size:cover, cover;
-}";
+	color:white;
+	height:100vh;
+	text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+";
 	wp_add_inline_style( 'red-starter-style', $hero_css);
 }
 
