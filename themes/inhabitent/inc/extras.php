@@ -55,7 +55,7 @@ function inhabitent_dynamic_css(){
     text-align: center;
 }
 ";
-	wp_add_inline_style( 'inhabitent-style', $hero_css);
+	wp_add_inline_style( 'red-starter-style', $hero_css);
 }
 
 
@@ -143,4 +143,30 @@ function inhabitent_wp_trim_excerpt( $text ) {
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'inhabitent_wp_trim_excerpt' );
 
+//TODO Filter tutles of product archives and taxonomy archive for product type
+// add_filter( 'get_the_archive_title', 'inhabitent_archive_title');
+// function inhabitent_archive_title ($title){
+// 	if(is_post_type_archive('product')){
+// 		$title = 'Shop Stuff';
+
+// 	}
+// return $title;
+// }
+// elseif(is_tax( 'product')){
+// 	$title = single_term_title( (' '), display )
+// }
+
+add_action( 'pre_get_posts', 'inhabitent_modify_archive_queries');
+function inhabitent_modify_archive_queries($query){
+	if(is_post_type_archive( array('product') ) || 
+	$query->is_tax('product_type') && 
+	!is_admin() && 
+	$query->is_main_query()
+	)
+	{
+		$query->set('orderby', 'title');
+		$query->set('order', 'ASC');
+		$query->set('posts_per_page', 16);
+	}
+}
  
