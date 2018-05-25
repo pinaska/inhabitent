@@ -300,6 +300,11 @@
 
 /*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
 .blog, .single-post, .archive{
+	.button-black-border{
+		a{
+			color:black;
+		}
+	}
   .post{
     margin-bottom: 80px;
     .entry-header{
@@ -321,7 +326,7 @@
           font-size: 2rem;
           font-weight: 700;
           &:hover{
-            color: $color_yellow;
+            color: $color_yellow_light;
           }
         }
         &:not(.blog){
