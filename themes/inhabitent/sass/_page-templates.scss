@@ -23,8 +23,34 @@
 		} 
 	}
 		// Global - pages without sidebar
-	.home,.page-template-about, .single-adventure
+	.home ,.page-template-about, .single-adventure
 	{
+		.site-header{
+			background-color: transparent;
+				border-bottom: 0;
+				position: absolute;
+				text-shadow: 1px 1px 2px #323232;
+				.site-branding{
+					a{
+						color:white;
+					}
+					.header-logo{
+						.logo{
+							width: 50px;
+							height: 33.25px;
+							background-size: cover;
+							background-image: url("../../img/inhabitent-logo-tent-white.svg");		
+						}
+					}
+				}
+				.main-navigation a{
+					color:white;
+					&:hover{
+						color:$color_yellow_light;
+					}
+				}
+				
+		}
 		.site-content{
 			width: 100%;
 // 			padding-top: 50px;
@@ -37,7 +63,8 @@
 				padding-right: 0;
 			}
 		}
-	}
+}
+	
 
 .tax-product_type, .post-type-archive-adventure
 	{
@@ -62,18 +89,28 @@
 }
 /* Front page front-page.php */
 .home{
-	.site-header{
-		background-color: transparent;
-    	border-bottom: 0;
-    	position: absolute;
-			text-shadow: 1px 1px 2px #323232;
-			.main-navigation a{
-				color:white;
-				&:hover{
-					color:$color_yellow_light;
-				}
-			}
-	}
+	// .site-header{
+	// 	background-color: transparent;
+  //   	border-bottom: 0;
+  //   	position: absolute;
+	// 		text-shadow: 1px 1px 2px #323232;
+	// 		.header-logo{
+	// 			.logo{
+	// 				width: 50px;
+	// 				height: 33.25px;
+	// 				background-size: cover;
+	// 				background-image: url("../../img/inhabitent-logo-tent-white.svg");		
+	// 			}
+
+	// 		}
+	// 		.main-navigation a{
+	// 			color:white;
+	// 			&:hover{
+	// 				color:$color_yellow_light;
+	// 			}
+	// 		}
+	// }
+
 	.front{
 		margin-bottom: 5rem;
 		width: 1120px;
@@ -160,6 +197,11 @@
     	left: .75rem;
     	font-size:.9rem;
     	color:#000;
+    	 a{
+    	 	&:hover{
+    	 		color:white;
+    	 	}
+    	 }
 	}
 }//end of blog-posts-container
 
@@ -587,8 +629,8 @@
           }
             .dots{
             	flex: 1;
-   			 	border-bottom:.5px dashed black;
-   				transform:translateY(-5px);
+   			 			border-bottom:.5px dashed black;
+   						transform:translateY(-5px);
             }
           }
           
@@ -626,4 +668,9 @@
 				flex-basis: 48%;
 			}
 		}
+}
+
+.fa-phone{
+	transform: scaleX(-1);
+
 }
