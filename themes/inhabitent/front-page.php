@@ -12,7 +12,7 @@
  */
 
 
-get_header('front'); ?>
+get_header(); ?>
 
 
 		<!--banner-->
