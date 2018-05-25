@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 //default style for pages with sidebar
-.blog, .single-post, .error404, .page, .archive, .search{
+.blog, .single-post, .error404, .archive,.page-id-29, .search{
 	.site-content{
       width: 1120px;
       margin: 0 auto;
@@ -16,20 +16,42 @@
       }
       .widget-area{ // sidebar
         flex-basis: 30%;
-        padding-top: 20px;
+        padding-top: 40px;
         padding-left: 60px;
         border-left: $solid_border;
       }  
 		} 
 	}
-	.home, .page-template-about, .tax-product_type{
+		// Global - pages without sidebar
+	.home,.page-template-about, .single-adventure
+	{
 		.site-content{
 			width: 100%;
-			padding-top: 50px;
+// 			padding-top: 50px;
 			display: block;
+			margin: 0 auto;
+			padding-top: 0;
 			.content-area{
 				width: 100%;
-				padding: 0;
+				padding-bottom: 60px;
+				padding-right: 0;
+			}
+		}
+	}
+
+.tax-product_type, .post-type-archive-adventure
+	{
+		.site-content{
+			width: 100%;
+// 			padding-top: 50px;
+			display: block;
+			margin: 0 auto;
+			padding-top: 0;
+			.content-area{
+				width: 100%;
+				padding-top: 60px;
+				padding-bottom: 60px;
+				padding-right: 0;
 			}
 		}
 	}
@@ -40,6 +62,18 @@
 }
 /* Front page front-page.php */
 .home{
+	.site-header{
+		background-color: transparent;
+    	border-bottom: 0;
+    	position: absolute;
+			text-shadow: 1px 1px 2px #323232;
+			.main-navigation a{
+				color:white;
+				&:hover{
+					color:$color_yellow_light;
+				}
+			}
+	}
 	.front{
 		margin-bottom: 5rem;
 		width: 1120px;
@@ -61,9 +95,6 @@
     background-size: cover,cover;
 		height:100vh;
 		width: 100%;
-		img{
-
-		}
 }
 /*Front page -> Shop products*/
 .product-container{
@@ -71,7 +102,7 @@
 	justify-content: space-between;
 	text-align: center;
 	.single-product-item{
-		border: 1px solid #e1e1e1;
+		border:$solid_border;
     border-top-width: 5px;
     flex-basis: 25%;
     max-width: 23.5%;
@@ -81,6 +112,9 @@
 		}
 		a{
 			color: white;
+			&hover{
+				color:white;
+			}
 		}
 		img{
 			height: 70px;
@@ -98,7 +132,7 @@
 	justify-content: space-between;
 	.blog-posts-single{
 		flex-basis: 33%;
-		border: 1px solid #e1e1e1;
+		border: $solid_border;
 		position: relative;
 		h3{
 			font-size: 1.3rem;
@@ -130,7 +164,7 @@
 }//end of blog-posts-container
 
 /*Front page -> Adventures section*/
-.adventures-posts-container{
+.adventures-posts-container {
 	display: grid;
 	grid-gap:14px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -161,7 +195,7 @@
 				text-transform: none;
 				color: white;
 				&:hover{
-				  color:$color_yellow;
+				  color:$color_yellow_light;
 				  opacity: 50%;
 				} 
 			}
@@ -172,9 +206,11 @@
 				font-family: $font_second;
 				text-transform: uppercase;
 				border: 1px solid white;
+				color:white;
 				&:hover{
 					background-color:$color_green;
 					border: 1px solid $color_green;
+					color:white;
 				}
 				   a{
 					color: white;
@@ -236,6 +272,30 @@
 	a{
 		color:white;
 	}
+}
+
+.single-adventure{
+	.site-header{
+			background-color: transparent;
+    	border-bottom: 0;
+    	position: absolute;
+			text-shadow: 1px 1px 2px #323232;
+			.main-navigation a{
+				color:white;
+				&:hover{
+					color:$color_yellow_light;
+				}
+			}
+		}
+	.single-adventure-text{
+		max-width: 800px;
+	}	
+}
+/*adventure archive*/
+.adventure-grid{
+		display: grid;
+    grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
 }
 
 /*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
@@ -332,8 +392,8 @@
 
    li {
    	display: inherit;
-   	border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
+   	border-top: $solid_border;
+    border-bottom:$solid_border;
     //how to not make the first top bottom?
     }
 
@@ -405,43 +465,73 @@
  
 /*about full-width page*/
 /* About page */
+
+
 .page-template-about{
-  .custom-hero{
-    // height:100vh;
-    // width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-		background-color: #aaa;
-		background-size: cover;
-    h1{
-      display: inline-block;
-      color:white;
-      position:absolute;
-      font-size:3rem;
-    }
-    img{
-      width: 100%;
-      filter: brightness(50%);
-    }
-  }
+	// .entry-header{
+  //   height:100vh;
+  //   width: 100vw;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+	// 	background-color: #aaa;
+	// 	background-size: cover;
+  //   h1{
+  //     display: inline-block;
+  //     color:white;
+  //     position:absolute;
+  //     font-size:3rem;
+  //   }
+	// }
+	
+	// .entry-title .about h1{
+	// 	margin: 0;
+  //   transform: translateY(200px);
+	// }
+	.site-header {
+    background-color: transparent;
+    border-bottom: 0;
+    position: absolute;
+		text-shadow: 1px 1px 2px #323232;
+		.main-navigation a {
+			color: #fff;
+			&:hover{
+				color :$color_yellow_light;
+			}
+	}
+	}
   .entry-content{
     width: 800px;
     margin: 80px auto;
     h2{
-      font-weight: 700;
-      font-size: 2.1rem;
-      line-height: 2.5rem;
-      margin-top: 50px;
+//       font-weight: 700;
+//       font-size: 2.1rem;
+//       line-height: 2.5rem;
+//       margin-top: 50px;
       text-align: center;
     }
   }
 } // end of .page-template-about
 
+.page-template-about .entry-title{
+	font-size: 3rem;
+	margin: 0;
+	// transform: translateY(200px);
+}
+// .custom-hero{
+// 	color: #fff;
+
+//     display: flex;
+
+//     flex-direction: column;
+//     justify-content: center;
+//     text-align: center;
+// }
+
 ///* Shop page style */
 .post-type-archive-product, .tax-product_type{
 	.content-area{
-		padding-top: 3rem;
+	padding-top: 3rem;
     padding-bottom: 3rem;
 	}
   .site-main{
@@ -449,8 +539,8 @@
       text-align: center;
       border-bottom: $dashed_border;
       padding-top: 3rem;
-//     	padding-bottom: 3rem;
-//     	margin-bottom: 3rem;
+    	padding-bottom: 3rem;
+    	margin-bottom: 3rem;
         li{
 					display: inline-block;
 					font-family: $font_second;
@@ -462,16 +552,16 @@
     }
     .product-grid{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 15px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap: 15px;
+			grid-row-gap: 15px;
       margin-bottom: 30px;
-      grid-row-gap: 15px;
       .product-grid-item{
         border: $solid_border;
         .product-item-thumbnail{
           overflow: hidden;
           height: 250px;
-          border-bottom: 5px solid #e1e1e1;
+          border-bottom: 5px solid $color_grey_lighter;
           img{
             height: 250px;
             width: 100%;
@@ -485,8 +575,15 @@
 		  	font-family: $font__main;
 		  	display: flex;
 		  	padding: .75rem 1rem;
+		  	justify-content: space-between;
+
           p{
             font-weight:lighter;
+          }
+            .dots{
+            	flex: 1;
+   			 	border-bottom:.5px dashed black;
+   				transform:translateY(-5px);
             }
           }
           
@@ -497,11 +594,17 @@
 
 //SINGLE-PRODUCT shop
 .single-product{
+	.content-area{
+		padding: 3rem 0;
+	}
 		.site-main{
 			padding-top: 3rem;
-			padding-bottom: 3rem;
 			display: flex;
 			justify-content:space-between;
+			.content-area{
+				padding-top: 3rem;
+    			padding-bottom: 3rem;
+			}
 			.entry-title{
 				color:$color_yellow;
 				line-height: 1.25;
