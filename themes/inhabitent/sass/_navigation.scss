@@ -139,31 +139,35 @@ a {
 
 			.header-search{
 				.search-form{
+					margin-top: 0;
+					.search-submit{
+						border:none;
+						background: none;
+						color:$color_green;
+					}
+					label{
+						// display: none;
+						float:left;
+						font-size:0.9rem;
+					}
 					.search-field{
 						// display: none;
 						width: 0;
-						// padding: 0;
-						// border: none;
+						padding: 0;
+						font-family: $font_second;
+						border: none;
 						transition: 1s;
-						// background-color: transparent;
+						background-color: transparent;
 					}
 					.search-field-focus{
 						width: 200px;
 						padding-left: 5px;
 					}
 				}
-			} // end of .header-search
-
-					
+			} // end of .header-search					
 		} // end of .main-navigation
 	} // end of .container
 } // end of .site-header
-.site-header-reversed{
-	background-color: rgba(255, 255, 255, 0.1);
-	// position: fixed;
-    width: 100%;
-    z-index: 1;
-}
 
 /* Small menu. */
 .menu-toggle,

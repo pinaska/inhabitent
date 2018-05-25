@@ -49,6 +49,13 @@
 						color:$color_yellow_light;
 					}
 				}
+				.search-submit .icon-search{
+					color:white;
+				}
+				.header-search{
+					color:white;
+				}
+
 				
 		}
 		.site-content{
@@ -307,8 +314,8 @@
     font-family: $font_second;
     font-size: 1.2rem;
     padding: 5px;
-	text-transform: uppercase;
-	text-align: center;
+		text-transform: uppercase;
+		text-align: center;
     width: 20%;
     margin-top: 1.2rem;
 	a{
@@ -333,12 +340,43 @@
 		max-width: 800px;
 	}	
 }
-/*adventure archive*/
-.adventure-grid{
-		display: grid;
-    grid-template-columns: 1fr 1fr;
-		grid-gap: 15px;
+/*Adventure archive*/
+.page-header.container{
+	text-align: center;
 }
+.adventure-grid{
+		padding-top: 60px;	
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 2fr;
+		grid-gap: 15px;
+		.adventure-grid-item{
+			position: relative;
+			img{
+				object-fit: cover;
+				height: 600px;
+				z-index: 1;
+				filter: contrast(80%) brightness(70%);
+			}
+			.adventure-item-info{
+				    margin: 1.5rem;
+    				position: absolute;
+   				 	z-index: 2;
+					top: 0;
+						h2{
+							font-family: 'Merriweather',serif;
+							font-weight: 400;
+							text-transform: none;
+							font-size: 3rem;
+					}
+						
+						
+						a{
+							color:white;
+						}
+					}
+			}
+		}//--end-of-adventure-grid
 
 /*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
 .blog, .single-post, .archive{
@@ -405,9 +443,9 @@
     } // end of .entry-header
     .cat-links, .tags-links{
     	display: inline-block;
-    font-family: Novecento Sans Web,sans-serif;
-    text-transform: uppercase;
-    margin-right: 1.5rem;
+    	font-family: Novecento Sans Web,sans-serif;
+    	text-transform: uppercase;
+    	margin-right: 1.5rem;
     }
   } // end of .post
 } // end of .blog, .single-post

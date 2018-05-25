@@ -669,18 +669,26 @@ a {
         text-transform: uppercase; }
         .site-header .container .main-navigation .menu-main-menu-container li {
           margin-left: 30px; }
-      .site-header .container .main-navigation .header-search .search-form .search-field {
-        width: 0;
-        -webkit-transition: 1s;
-        transition: 1s; }
-      .site-header .container .main-navigation .header-search .search-form .search-field-focus {
-        width: 200px;
-        padding-left: 5px; }
-
-.site-header-reversed {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 100%;
-  z-index: 1; }
+      .site-header .container .main-navigation .header-search .search-form {
+        margin-top: 0; }
+        .site-header .container .main-navigation .header-search .search-form .search-submit {
+          border: none;
+          background: none;
+          color: #248A83; }
+        .site-header .container .main-navigation .header-search .search-form label {
+          float: left;
+          font-size: 0.9rem; }
+        .site-header .container .main-navigation .header-search .search-form .search-field {
+          width: 0;
+          padding: 0;
+          font-family: "Novecentos", sans-serif;
+          border: none;
+          -webkit-transition: 1s;
+          transition: 1s;
+          background-color: transparent; }
+        .site-header .container .main-navigation .header-search .search-form .search-field-focus {
+          width: 200px;
+          padding-left: 5px; }
 
 /* Small menu. */
 .menu-toggle,
@@ -918,6 +926,10 @@ object {
     color: white; }
     .home .site-header .main-navigation a:hover, .page-template-about .site-header .main-navigation a:hover, .single-adventure .site-header .main-navigation a:hover {
       color: #f0e4d1; }
+  .home .site-header .search-submit .icon-search, .page-template-about .site-header .search-submit .icon-search, .single-adventure .site-header .search-submit .icon-search {
+    color: white; }
+  .home .site-header .header-search, .page-template-about .site-header .header-search, .single-adventure .site-header .header-search {
+    color: white; }
 
 .home .site-content, .page-template-about .site-content, .single-adventure .site-content {
   width: 100%;
@@ -1142,11 +1154,37 @@ object {
 .single-adventure .single-adventure-text {
   max-width: 800px; }
 
-/*adventure archive*/
+/*Adventure archive*/
+.page-header.container {
+  text-align: center; }
+
 .adventure-grid {
+  padding-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
   grid-gap: 15px; }
+  .adventure-grid .adventure-grid-item {
+    position: relative; }
+    .adventure-grid .adventure-grid-item img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 600px;
+      z-index: 1;
+      -webkit-filter: contrast(80%) brightness(70%);
+              filter: contrast(80%) brightness(70%); }
+    .adventure-grid .adventure-grid-item .adventure-item-info {
+      margin: 1.5rem;
+      position: absolute;
+      z-index: 2;
+      top: 0; }
+      .adventure-grid .adventure-grid-item .adventure-item-info h2 {
+        font-family: 'Merriweather',serif;
+        font-weight: 400;
+        text-transform: none;
+        font-size: 3rem; }
+      .adventure-grid .adventure-grid-item .adventure-item-info a {
+        color: white; }
 
 /*Single post page->single.php, blog(journal) page -> home.php, category/archive page ->archive.php*/
 .blog .button-black-border a, .single-post .button-black-border a, .archive .button-black-border a {
