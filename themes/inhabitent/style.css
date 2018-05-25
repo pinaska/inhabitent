@@ -651,11 +651,6 @@ a {
         height: 33.25px;
         background-size: cover;
         background-image: url("../../img/inhabitent-logo-tent.svg"); }
-      .site-header .container .site-branding .header-logo .logo_white {
-        width: 50px;
-        height: 33.25px;
-        background-size: cover;
-        background-image: url("../../img/inhabitent-logo-tent-white.svg"); }
     .site-header .container .main-navigation {
       -ms-flex-preferred-size: 80%;
           flex-basis: 80%;
@@ -675,7 +670,9 @@ a {
         .site-header .container .main-navigation .menu-main-menu-container li {
           margin-left: 30px; }
       .site-header .container .main-navigation .header-search .search-form .search-field {
-        display: none; }
+        width: 0;
+        -webkit-transition: 1s;
+        transition: 1s; }
       .site-header .container .main-navigation .header-search .search-form .search-field-focus {
         width: 200px;
         padding-left: 5px; }
@@ -905,6 +902,23 @@ object {
     padding-left: 60px;
     border-left: 1px solid #e1e1e1; }
 
+.home .site-header, .page-template-about .site-header, .single-adventure .site-header {
+  background-color: transparent;
+  border-bottom: 0;
+  position: absolute;
+  text-shadow: 1px 1px 2px #323232; }
+  .home .site-header .site-branding a, .page-template-about .site-header .site-branding a, .single-adventure .site-header .site-branding a {
+    color: white; }
+  .home .site-header .site-branding .header-logo .logo, .page-template-about .site-header .site-branding .header-logo .logo, .single-adventure .site-header .site-branding .header-logo .logo {
+    width: 50px;
+    height: 33.25px;
+    background-size: cover;
+    background-image: url("../../img/inhabitent-logo-tent-white.svg"); }
+  .home .site-header .main-navigation a, .page-template-about .site-header .main-navigation a, .single-adventure .site-header .main-navigation a {
+    color: white; }
+    .home .site-header .main-navigation a:hover, .page-template-about .site-header .main-navigation a:hover, .single-adventure .site-header .main-navigation a:hover {
+      color: #f0e4d1; }
+
 .home .site-content, .page-template-about .site-content, .single-adventure .site-content {
   width: 100%;
   display: block;
@@ -931,16 +945,6 @@ object {
   width: 1120px; }
 
 /* Front page front-page.php */
-.home .site-header {
-  background-color: transparent;
-  border-bottom: 0;
-  position: absolute;
-  text-shadow: 1px 1px 2px #323232; }
-  .home .site-header .main-navigation a {
-    color: white; }
-    .home .site-header .main-navigation a:hover {
-      color: #f0e4d1; }
-
 .home .front {
   margin-bottom: 5rem;
   width: 1120px; }
@@ -1036,6 +1040,8 @@ object {
     left: .75rem;
     font-size: .9rem;
     color: #000; }
+    .blog-posts-container .button-black-border a:hover {
+      color: white; }
 
 /*Front page -> Adventures section*/
 .adventures-posts-container {
@@ -1374,6 +1380,10 @@ object {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%; }
 
+.fa-phone {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+
 /*Footer*/
 .site-footer {
   background: url(../../img/dark-wood@2x.png);
@@ -1411,3 +1421,6 @@ object {
     padding: 1.5rem 0;
     text-align: center;
     text-transform: uppercase; }
+  .site-footer .fa-phone {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1); }
