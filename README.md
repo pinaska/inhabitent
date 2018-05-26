@@ -6,6 +6,7 @@ due to the many css changes required by this project, I searched for the way to 
 
 -- transform translateY
 -- two different WP loops used
+![inhabitent-recorded-layout](inhabitent_layouts.webm)
 
 -------
 [#kasiaikod](http://www.kasiaikod.pl/)
