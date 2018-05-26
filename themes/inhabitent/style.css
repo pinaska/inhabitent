@@ -1,9 +1,9 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: Inhabitent
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Kate Jeziorska @ RED Academy, Spring 2018
 Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for RED Academy students.
+Description: A WordPress starter theme for RED Academy students, developed and styled according to the project requirements, by Kate.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -895,19 +895,19 @@ object {
 .blog .site-content, .single-post .site-content, .error404 .site-content, .archive .site-content, .page-id-29 .site-content, .search .site-content {
   width: 1120px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .blog .site-content .content-area, .single-post .site-content .content-area, .error404 .site-content .content-area, .archive .site-content .content-area, .page-id-29 .site-content .content-area, .search .site-content .content-area {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
-    padding: 60px 50px 60px 0; }
+    padding: 3.75rem 3.125rem 3.75rem 0; }
   .blog .site-content .widget-area, .single-post .site-content .widget-area, .error404 .site-content .widget-area, .archive .site-content .widget-area, .page-id-29 .site-content .widget-area, .search .site-content .widget-area {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
-    padding-top: 40px;
-    padding-left: 60px;
+    padding-top: 2.5rem;
+    padding-left: 3.75rem;
     border-left: 1px solid #e1e1e1; }
 
 .home .site-header, .page-template-about .site-header, .single-adventure .site-header {
@@ -918,8 +918,8 @@ object {
   .home .site-header .site-branding a, .page-template-about .site-header .site-branding a, .single-adventure .site-header .site-branding a {
     color: white; }
   .home .site-header .site-branding .header-logo .logo, .page-template-about .site-header .site-branding .header-logo .logo, .single-adventure .site-header .site-branding .header-logo .logo {
-    width: 50px;
-    height: 33.25px;
+    width: 3.125rem;
+    height: 2.063rem;
     background-size: cover;
     background-image: url("../../img/inhabitent-logo-tent-white.svg"); }
   .home .site-header .main-navigation a, .page-template-about .site-header .main-navigation a, .single-adventure .site-header .main-navigation a {
@@ -938,7 +938,7 @@ object {
   padding-top: 0; }
   .home .site-content .content-area, .page-template-about .site-content .content-area, .single-adventure .site-content .content-area {
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 3.125rem;
     padding-right: 0; }
 
 .tax-product_type .site-content, .post-type-archive-adventure .site-content {
@@ -948,8 +948,8 @@ object {
   padding-top: 0; }
   .tax-product_type .site-content .content-area, .post-type-archive-adventure .site-content .content-area {
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
     padding-right: 0; }
 
 .container {
@@ -995,7 +995,7 @@ object {
   text-align: center; }
   .product-container .single-product-item {
     border: 1px solid #e1e1e1;
-    border-top-width: 5px;
+    border-top-width: 0.3125rem;
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 23.5%;
@@ -1088,7 +1088,7 @@ object {
         color: #f0e4d1;
         opacity: 50%; }
     .adventures-posts-container .adventures-posts-single-text .adventures-post-button {
-      padding: 5px;
+      padding: 0.3125rem;
       text-align: center;
       font-family: "Novecentos", sans-serif;
       text-transform: uppercase;
@@ -1133,7 +1133,7 @@ object {
   color: #fff;
   font-family: "Novecentos", sans-serif;
   font-size: 1.2rem;
-  padding: 5px;
+  padding: 0.3125rem;
   text-transform: uppercase;
   text-align: center;
   width: 20%;
@@ -1159,7 +1159,7 @@ object {
   text-align: center; }
 
 .adventure-grid {
-  padding-top: 60px;
+  padding-top: 3.125rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 2fr;
@@ -1220,7 +1220,7 @@ object {
       right: 0;
       bottom: 0;
       background-color: #248A83;
-      padding: 5px 15px;
+      padding: 0.3125rem 15px;
       color: white;
       font-family: "Novecentos", sans-serif;
       text-transform: uppercase; }
@@ -1421,6 +1421,11 @@ object {
 .fa-phone {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1); }
+
+.search .page-header {
+  border-bottom: solid_border;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem; }
 
 /*Footer*/
 .site-footer {

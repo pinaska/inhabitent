@@ -7,17 +7,17 @@
 	.site-content{
       width: 1120px;
       margin: 0 auto;
-      padding-top: 50px;
+      padding-top: 3.125rem;
       display: flex;
 
       .content-area{
         flex-basis: 70%;
-        padding: 60px 50px 60px 0;
+        padding: 3.75rem 3.125rem 3.75rem 0;
       }
       .widget-area{ // sidebar
         flex-basis: 30%;
-        padding-top: 40px;
-        padding-left: 60px;
+        padding-top: 2.5rem;
+        padding-left: 3.75rem;
         border-left: $solid_border;
       }  
 		} 
@@ -36,8 +36,8 @@
 					}
 					.header-logo{
 						.logo{
-							width: 50px;
-							height: 33.25px;
+							width: 3.125rem;
+							height: 2.063rem;
 							background-size: cover;
 							background-image: url("../../img/inhabitent-logo-tent-white.svg");		
 						}
@@ -66,7 +66,7 @@
 			padding-top: 0;
 			.content-area{
 				width: 100%;
-				padding-bottom: 60px;
+				padding-bottom: 3.125rem;
 				padding-right: 0;
 			}
 		}
@@ -83,8 +83,8 @@
 			padding-top: 0;
 			.content-area{
 				width: 100%;
-				padding-top: 60px;
-				padding-bottom: 60px;
+				padding-top: 3.125rem;
+				padding-bottom: 3.125rem;
 				padding-right: 0;
 			}
 		}
@@ -147,7 +147,7 @@
 	text-align: center;
 	.single-product-item{
 		border:$solid_border;
-    border-top-width: 5px;
+    border-top-width: 0.3125rem;
     flex-basis: 25%;
     max-width: 23.5%;
 		padding: .75rem;
@@ -249,7 +249,7 @@
 				} 
 			}
 			.adventures-post-button{
-				padding: 5px;
+				padding: 0.3125rem;
 				// width: 40%;
 				text-align: center;
 				font-family: $font_second;
@@ -313,7 +313,7 @@
     color: #fff;
     font-family: $font_second;
     font-size: 1.2rem;
-    padding: 5px;
+    padding: 0.3125rem;
 		text-transform: uppercase;
 		text-align: center;
     width: 20%;
@@ -345,7 +345,7 @@
 	text-align: center;
 }
 .adventure-grid{
-		padding-top: 60px;	
+		padding-top: 3.125rem;	
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 2fr 2fr;
@@ -420,7 +420,7 @@
         right: 0;
         bottom: 0;
         background-color: $color_green;
-        padding: 5px 15px;
+        padding: 0.3125rem 15px;
         color: white;
         font-family: $font_second;
         text-transform: uppercase;
@@ -711,4 +711,10 @@
 .fa-phone{
 	transform: scaleX(-1);
 
+}
+
+.search .page-header{
+	border-bottom: solid_border;
+	margin-bottom: 3rem;
+	padding-bottom: 1rem;
 }
