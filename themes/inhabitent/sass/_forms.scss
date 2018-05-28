@@ -28,8 +28,8 @@ input[type="submit"], .button-green, a.button-green{
 		color:#ffff;
 	}
 }
-button.button-black-border, 
-.button-black-border, 
+button.button-black-border,
+.button-black-border,
 {
 	border: 1px solid black;
 	padding: 10px;
@@ -45,6 +45,9 @@ button.button-black-border,
 		background: $color_green;
 		color: white;
 		border: 1px solid $color_green;
+		a{
+			color:white;
+		}
 	}
 	&:active,
 	&:focus {
@@ -100,7 +103,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	background-color:#f4f4f4;
-	width:100%;
+// 	width:100%;
 
 	&:focus {
 		color: #111;
@@ -125,7 +128,6 @@ label{
 	text-transform:uppercase;
 	font-size:1.1rem;
 	display:block;
-	margin-bottom:10px;
 	.required{
 		color:$color_yellow;
 	}

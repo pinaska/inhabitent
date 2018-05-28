@@ -12,15 +12,18 @@
 
       .content-area{
         flex-basis: 70%;
-        padding: 3.75rem 3.125rem 3.75rem 0;
+				padding: 3.75rem 3.125rem 3.75rem 0;
+					.entry-header h1 {
+						margin-top: 0;
+				}
       }
       .widget-area{ // sidebar
         flex-basis: 30%;
         padding-top: 2.5rem;
         padding-left: 3.75rem;
         border-left: $solid_border;
-      }  
-		} 
+      }
+		}
 	}
 		// Global - pages without sidebar
 	.home ,.page-template-about, .single-adventure
@@ -39,7 +42,7 @@
 							width: 3.125rem;
 							height: 2.063rem;
 							background-size: cover;
-							background-image: url("../../img/inhabitent-logo-tent-white.svg");		
+							background-image: url("../../img/inhabitent-logo-tent-white.svg");
 						}
 					}
 				}
@@ -55,8 +58,6 @@
 				.header-search{
 					color:white;
 				}
-
-				
 		}
 		.site-content{
 			width: 100%;
@@ -71,9 +72,9 @@
 			}
 		}
 }
-	
 
-.tax-product_type, .post-type-archive-adventure
+
+.tax-product_type, .post-type-archive-adventure, .post-type-archive-product
 	{
 		.site-content{
 			width: 100%;
@@ -86,38 +87,19 @@
 				padding-top: 3.125rem;
 				padding-bottom: 3.125rem;
 				padding-right: 0;
+				h1{
+					margin-top: 3rem;
+				}
 			}
 		}
 	}
 
 .container {
-	margin: 0 auto;	
+	margin: 0 auto;
 	width: 1120px;
 }
 /* Front page front-page.php */
 .home{
-	// .site-header{
-	// 	background-color: transparent;
-  //   	border-bottom: 0;
-  //   	position: absolute;
-	// 		text-shadow: 1px 1px 2px #323232;
-	// 		.header-logo{
-	// 			.logo{
-	// 				width: 50px;
-	// 				height: 33.25px;
-	// 				background-size: cover;
-	// 				background-image: url("../../img/inhabitent-logo-tent-white.svg");		
-	// 			}
-
-	// 		}
-	// 		.main-navigation a{
-	// 			color:white;
-	// 			&:hover{
-	// 				color:$color_yellow_light;
-	// 			}
-	// 		}
-	// }
-
 	.front{
 		margin-bottom: 5rem;
 		width: 1120px;
@@ -128,7 +110,7 @@
 			margin-bottom: 3.75rem;
 			text-align: center;
 		}
-} 
+}
 
 /*Front page -> Banner*/
 .front-page-banner{
@@ -197,15 +179,15 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: .75rem;
-	} 
+	}
 	.button-black-border{
 		position:absolute;
     	bottom: .75rem;
     	left: .75rem;
     	font-size:.9rem;
     	color:#000;
-    	 a{
     	 	&:hover{
+    	 		a{
     	 		color:white;
     	 	}
     	 }
@@ -223,7 +205,7 @@
 			img{
 			display: inline-block;
 			object-fit: cover; //https://www.w3schools.com/css/css3_object-fit.asp
-			width: 100%; 
+			width: 100%;
 			//https://www.w3schools.com/cssref/css3_pr_filter.asp
 			filter: contrast(80%) brightness(70%);
 		}
@@ -246,7 +228,7 @@
 				&:hover{
 				  color:$color_yellow_light;
 				  opacity: 50%;
-				} 
+				}
 			}
 			.adventures-post-button{
 				padding: 0.3125rem;
@@ -264,14 +246,14 @@
 				   a{
 					color: white;
 				   }
-			  }	
+			  }
 	}
 	.adventures-posts-single:nth-child(1){
 		grid-row-start: span 2;
 		grid-column-start: span 2;
 		height: 552.5px;
 		img{
-		  height: 552.5px; 
+		  height: 552.5px;
 		}
 	  }
 	.adventures-posts-single:nth-child(2){
@@ -368,12 +350,27 @@
 							font-weight: 400;
 							text-transform: none;
 							font-size: 3rem;
-					}
-						
-						
+					}	
 						a{
 							color:white;
 						}
+						.adventures-post-button{
+							padding: 0.3125rem;
+							// width: 40%;
+							text-align: center;
+							font-family: $font_second;
+							text-transform: uppercase;
+							border: 1px solid white;
+							color:white;
+							&:hover{
+								background-color:$color_green;
+								border: 1px solid $color_green;
+								color:white;
+							}
+								 a{
+								color: white;
+								 }
+							}
 					}
 			}
 		}//--end-of-adventure-grid
@@ -438,7 +435,7 @@
               }
             }
           }
-        }  
+        }
       } // end of .entry-meta
     } // end of .entry-header
     .cat-links, .tags-links{
@@ -550,8 +547,6 @@
  
 /*about full-width page*/
 /* About page */
-
-
 .page-template-about{
 	// .entry-header{
   //   height:100vh;
@@ -589,10 +584,6 @@
     width: 800px;
     margin: 80px auto;
     h2{
-//       font-weight: 700;
-//       font-size: 2.1rem;
-//       line-height: 2.5rem;
-//       margin-top: 50px;
       text-align: center;
     }
   }
@@ -601,30 +592,19 @@
 .page-template-about .entry-title{
 	font-size: 3rem;
 	margin: 0;
-	// transform: translateY(200px);
 }
-// .custom-hero{
-// 	color: #fff;
-
-//     display: flex;
-
-//     flex-direction: column;
-//     justify-content: center;
-//     text-align: center;
-// }
 
 ///* Shop page style */
 .post-type-archive-product, .tax-product_type{
 	.content-area{
-	padding-top: 3rem;
     padding-bottom: 3rem;
 	}
   .site-main{
     .page-header{
       text-align: center;
       border-bottom: $dashed_border;
-      padding-top: 3rem;
-    	padding-bottom: 3rem;
+      // padding-top: 3rem;
+//     	padding-bottom: 3rem;
     	margin-bottom: 3rem;
         li{
 					display: inline-block;
@@ -656,11 +636,11 @@
         .product-item-info{
           background-color: white;
           border-top-width: 5px;
-		  	font-size: .9rem;
-		  	font-family: $font__main;
-		  	display: flex;
-		  	padding: .75rem 1rem;
-		  	justify-content: space-between;
+					font-size: .9rem;
+					font-family: $font__main;
+					display: flex;
+					padding: .75rem 1rem;
+					justify-content: space-between;
 
           p{
             font-weight:lighter;
@@ -714,7 +694,7 @@
 }
 
 .search .page-header{
-	border-bottom: solid_border;
+	border-bottom:1px solid $color_grey_lighter;
 	margin-bottom: 3rem;
 	padding-bottom: 1rem;
 }

@@ -17,13 +17,13 @@ get_header(); ?>
 
 		<!--banner-->
 			<section class="front-page-banner">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inhabitent-logo-full.svg" alt="Inhabitent logo"/></a>
+			<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inhabitent-logo-full.svg" alt="Inhabitent logo"/></a>
 			</section><!--banner-->
 
 	<div id="primary" class="home content-area">
-		<main id="main" class="site-main" role="main">	
+		<main id="main" class="site-main" role="main">
 			<section class="front shop container">
-				<h2>SHOP STUFF</h2>	
+				<h2>SHOP STUFF</h2>
 
 				<?php $terms = get_terms(array (
 					'taxonomy' => 'product_type',
@@ -39,7 +39,7 @@ get_header(); ?>
 								<a class="button-green" href="<?php echo get_term_link( $term );?>">
 								<?php echo $term->name; ?> Stuff</a>
 							</p>
-			</div>	
+			</div>
 			<?php endforeach;?>
 			</div>
 
@@ -71,16 +71,15 @@ get_header(); ?>
 				<?php
 					endwhile; wp_reset_postdata(); ?>
 				</div><!--blog-posts-->
-					
 			</section><!--blog-->
 
 			<section class="front adventures container">
 			<h2>LATEST ADVENTURES</h2>
 				<div class="adventures-posts-container">
 					<?php
-					$args = array( 
-						'post_type' => 'adventure', 
-						'posts_per_page' => 4, 
+					$args = array(
+						'post_type' => 'adventure',
+						'posts_per_page' => 4,
 						'orderby' => 'date',
 						'order' => 'ASC'
 						);
@@ -88,7 +87,7 @@ get_header(); ?>
 					?>
 
 					<?php foreach ( $latest_adventure_posts as $post ) : setup_postdata( $post ); ?>
-					
+
 						<article class="adventures-posts-single">
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'large' ); ?>
@@ -96,7 +95,7 @@ get_header(); ?>
 
 							<div class="adventures-posts-single-text">
 								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-								<a class="adventures-post-button" href=<?php echo get_permalink() ?>>read more</a>    
+								<a class="adventures-post-button" href=<?php echo get_permalink() ?>>read more</a>
 							</div><!-- .adventures-posts-single-text-->
 						</article><!-- adventures-posts-single -->
 
